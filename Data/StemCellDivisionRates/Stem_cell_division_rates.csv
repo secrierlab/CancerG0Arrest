@@ -1,0 +1,17 @@
+﻿Cancer type,Number of divisions of each stem cell per year,Number of divisions of each stem cell per lifetime,Cumulative number of divisions of all stem cells per lifetime
+ESCA-SC,17.4,1390,1.20E+09
+COAD,73,5840,1.17E+12
+READ,73,5840,1.17E+12
+GBM,0,0,2.70E+08
+HNSC,21.5,1720,3.19E+10
+LIHC,0.9125,88,2.71E+11
+LUAD,0.07,5.6,9.27E+09
+SKCM,2.48,199,7.64E+11
+PAAD,1,80,6.07E+09
+TGCT,5.8,463,3.35E+09
+THCA,0.087,7,5.85E+07
+,,,
+,,,
+,,,
+,,,
+,,,

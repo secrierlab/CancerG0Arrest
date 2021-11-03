@@ -3,7 +3,7 @@
 #########################################################
 
 #Load the CNV data for ACC
-setwd("~/Documents/GitHub/CancerDormancy/Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("TCGA-ACCCopy_Number_Variation.RData")
 CNV <- as.data.frame(data)
 rownames(CNV) <- CNV$`Gene Symbol`

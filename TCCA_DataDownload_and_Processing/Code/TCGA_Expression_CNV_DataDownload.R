@@ -10,7 +10,7 @@ library(RTCGAToolbox)
 #This code allows you to download Harmonized TCGA Hg38 data
 
 #Set the directory to which you want to download the data (a separate folder will be created for each cancer/study type)
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 
 #Type in here the list of cancer types/studies for which you want to download the data. The for loop will subseqeuntly download data for each study.
 CT <- c("ACC", "BLCA", "BRCA", "CESC", "CHOL", "COAD","ESCA","GBM","HNSC","KICH","KIRC","KIRP","LGG","LIHC","LUAD","LUSC","MESO","OV","PAAD","PCPG","PRAD","READ","SARC","SKCM","STAD","TGCT","THCA","THYM","UCEC","UCS","UVM")
@@ -78,7 +78,7 @@ for (i in CT) {
   write.table(file=paste(paste(i,"Clinical_harmonized",sep='_'),'.txt',sep=''),clinical,sep='\t',row.names=T,quote=F)
   
   
-  setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+  setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
   
   system('rm *.RData')
   

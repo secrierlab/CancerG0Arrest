@@ -10,7 +10,7 @@ library(GSVA)
 #Common Quiescence score
 
 #Load RNA-seq data:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder
@@ -45,7 +45,7 @@ save(z_score, file = "TCGA_common_QS_purity_scaled.RData")
 #CDK4/6 inhibition Quiescence score
 
 #Load RNA-seq data:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder
@@ -81,7 +81,7 @@ save(z_score, file = "TCGA_CDK_inhibition_QS_purity_scaled.RData")
 #Contact inhibition Quiescence score
 
 #Load RNA-seq data:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder
@@ -119,7 +119,7 @@ save(z_score, file = "TCGA_contact_inhibition_QS_purity_scaled.RData")
 #MEK inhibition Quiescence score
 
 #Load RNA-seq data:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder
@@ -154,7 +154,7 @@ save(z_score, file = "TCGA_MEK_inhibition_QS_purity_scaled.RData")
 #Serum Starvation Quiescence score
 
 #Load RNA-seq data:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder
@@ -190,7 +190,7 @@ save(z_score, file = "TCGA_serum_starvation_QS_purity_scaled.RData")
 #Spontaneous Quiescence score
 
 #Load RNA-seq data:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder

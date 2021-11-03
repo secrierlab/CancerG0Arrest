@@ -18,7 +18,7 @@ CA20$PatientID <- sapply(CA20$Sample.ID, function(x)
 #########
 #Load CNV data:
 #Load the CNV data for ACC
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_CNV.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder

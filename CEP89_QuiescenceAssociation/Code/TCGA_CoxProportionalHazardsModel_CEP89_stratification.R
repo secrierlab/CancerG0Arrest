@@ -15,7 +15,7 @@ library(forestmodel)
 
 ###########################################################################
 #Load clinical information and clean up:
-setwd("~/Documents/GitHub/CancerDormancy/Data/ClinicalData")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_ClinicalData/")
 clinical.data <- read.csv("combined_study_clinical_data.csv", header = TRUE)
 columns_of_interest <- c("Patient.ID","Sample.ID","Sample.Type","Diagnosis.Age","Neoplasm.Disease.Stage.American.Joint.Committee.on.Cancer.Code","Cancer.Type",
                          "TCGA.PanCanAtlas.Cancer.Type.Acronym","Disease.Free..Months.","Disease.Free.Status","Months.of.disease.specific.survival",
@@ -34,7 +34,7 @@ rownames(clinical.data) <- clinical.data$Patient.ID
 ####################
 ###Add CEP89 expression:
 ###################
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_experssion_FPKM.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder

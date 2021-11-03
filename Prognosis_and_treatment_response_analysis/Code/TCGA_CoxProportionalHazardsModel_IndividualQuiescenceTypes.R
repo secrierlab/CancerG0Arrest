@@ -17,7 +17,7 @@ library(ggplot2)
 
 ###########################################################################
 #Load clinical information and clean up:
-setwd("~/Documents/GitHub/CancerDormancy/Data/ClinicalData")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_ClinicalData/")
 clinical.data <- read.csv("combined_study_clinical_data.csv", header = TRUE)
 #(data was downloaded from  cbioportal)
 #Select columns of interest

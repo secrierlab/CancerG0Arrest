@@ -25,7 +25,7 @@ pure.samples <- as.character(tumour.purity$SampleID)
 
 #########################################################################
 ####Load expression data and select samples with purity greater than 0.3
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_experssion_FPKM.RData")
 #This a limited example dataframe with only 100 entries 
 #To download the full dataset follow instructions in the "TCGA_DataDownload" folder
@@ -123,7 +123,7 @@ for (a in CT) {
   scaled.data <- MOFAobject_reg@TrainData$mRNA 
   
   #Save the scaled data
-  setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+  setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
   save(scaled.data, file = paste("scaled_expr_data_",a,".RData",sep = ""))
   
 }
@@ -132,7 +132,7 @@ for (a in CT) {
 #############################################################################
 #Combine scaled RNA-seq data from various cancer studies
 
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("scaled_expr_data_ACC.RData")
 combined.scaled <- scaled.data
 combined.scaled <- data.frame(t(combined.scaled))
@@ -155,7 +155,7 @@ for (a in CT) {
 
 
 ####Save the combined data:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 save(combined.scaled, file = "combined_scaled_expr_data.RData")
 
 
