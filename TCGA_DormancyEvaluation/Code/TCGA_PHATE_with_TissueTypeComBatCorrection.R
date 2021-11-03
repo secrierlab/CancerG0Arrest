@@ -17,9 +17,9 @@ load("upregulated_common.RData")
 
 #Load the pancancer expression (ComBat scaled):
 setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
+expr.data <- fread("TCGA_combat_tumor_type_correction.txt", sep = "\t")
 #This is an example dataframe with 100 entries only
 
-expr.data <- fread("TCGA_combat_tumor_type_correction.txt", sep = "\t")
 #Select only genes involved in quiescence to reduce the size of the dataframe:
 expr.data <- expr.data[which(expr.data$genes %in% c(downregulated_common, upregulated_common)),]
 #Set the genes as rownames
