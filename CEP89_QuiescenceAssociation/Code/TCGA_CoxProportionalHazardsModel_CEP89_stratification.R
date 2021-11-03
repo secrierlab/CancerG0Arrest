@@ -34,8 +34,10 @@ rownames(clinical.data) <- clinical.data$Patient.ID
 ####################
 ###Add CEP89 expression:
 ###################
-setwd("~/Documents/GitHub/CancerDormancy/Data/")
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Data/")
 load("combined_experssion_FPKM.RData")
+#This a limited example dataframe with only 100 entries 
+#To download the full dataset follow instructions in the "TCGA_DataDownload" folder
 combined_data$PatientID <- sapply(rownames(combined_data), function(x)
   paste(strsplit(x,"-")[[1]][1:3],collapse="-"))
 combined_data <- combined_data[,colnames(combined_data) %in% c("PatientID","ENSG00000121289")]
