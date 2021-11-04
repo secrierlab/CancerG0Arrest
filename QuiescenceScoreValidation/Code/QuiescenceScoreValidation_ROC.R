@@ -226,8 +226,7 @@ save(z_scores, file = "GSE83142_QS.RData")
 
 ##############
 #GSE93991
-setwd("~/Documents/Dormancy_PhD_project_data/RNA_seq_data/GSE93991/")
-expr.data <- read.table(file = "GSE93991_RNA-seq_Expression_Data.txt", sep = "\t", header = FALSE)
+expr.data <- read.table(file = "GSE93991_RNA-seq_Expression_Data.txt", sep = "\t", header = FALSE) #data can be downloaded from GEO using accession code GSE93991
 rownames(expr.data) <- expr.data$V1
 expr.data$V1 <- NULL
 #Expression data starts from V10
@@ -243,16 +242,13 @@ expr.data$V9 <- NULL
 Sample <- c("Quiescence1", "Quiescence2", "Quiescence3", "Proliferation1", "Quiescence4", "Proliferation2", "Quiescence5", "Proliferation3","Proliferation4", "Proliferation5", "Proliferation6", "proliferation7", "Proliferation8", "Proliferation9", "Quiescence6" )
 colnames(expr.data) <- Sample
 X <- as.matrix(expr.data)
-
-#Now its time for scoring samples:
-library(GSVA)
+#Quiescence scoring
 gene_lists <- list(upregulated_common_ENSG, downregulated_common_ENSG)
 es.dif <- gsva(X, gene_lists, method = "zscore", verbose = FALSE, parallel.sz=1)
 es.dif <- t(es.dif)
 es.dif <- data.frame(es.dif)
 es.dif$GSVA_score <- es.dif$X1 - es.dif$X2
 #Now look at the differences in scores across the two cell types
-
 binary_groups <- c(1,1,1,0,1,0,1,0,0,0,0,0,0,0,1)
 z_score <- es.dif$GSVA_score
 z_score_common <- data.frame(z_score, binary_groups)
