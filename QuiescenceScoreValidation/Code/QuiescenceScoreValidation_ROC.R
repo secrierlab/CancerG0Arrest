@@ -242,6 +242,7 @@ expr.data$V9 <- NULL
 Sample <- c("Quiescence1", "Quiescence2", "Quiescence3", "Proliferation1", "Quiescence4", "Proliferation2", "Quiescence5", "Proliferation3","Proliferation4", "Proliferation5", "Proliferation6", "proliferation7", "Proliferation8", "Proliferation9", "Quiescence6" )
 colnames(expr.data) <- Sample
 X <- as.matrix(expr.data)
+X <- log2(X +1)
 #Quiescence scoring
 gene_lists <- list(upregulated_common_ENSG, downregulated_common_ENSG)
 es.dif <- gsva(X, gene_lists, method = "zscore", verbose = FALSE, parallel.sz=1)
