@@ -59,7 +59,7 @@ z_score <- es.dif$GSVA_score
 z_score_common <- data.frame(z_score, binary_groups)
 rownames(z_score_common) <- annotation$Samples
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Results/")
-save(z_score_common, file = "GSE131594_QS.RData")
+#save(z_score_common, file = "GSE131594_QS.RData")
 
 
 
@@ -88,7 +88,7 @@ binary_group <- es.dif$quiescence.group
 z_scores <- data.frame(z_score, binary_group)
 rownames(z_scores) <- PatientID
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Results/")
-save(z_scores, file = "GSE114012_QS.RData")
+#save(z_scores, file = "GSE114012_QS.RData")
 
 
 
@@ -126,7 +126,7 @@ binary_group <- es.dif$group
 z_scores <- data.frame(Score, binary_group)
 rownames(z_scores) <- Patient_ID
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Results/")
-save(z_scores, file = "GSE137912_QS.RData")
+#save(z_scores, file = "GSE137912_QS.RData")
 
 
 
@@ -158,7 +158,7 @@ z_score <- es.dif$GSVA_score
 z_score_common <- data.frame(z_score, binary_groups)
 rownames(z_score_common) <- annotation$Samples
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Results/")
-save(z_score_common, file = "GSE152699_QS.RData")
+#save(z_score_common, file = "GSE152699_QS.RData")
 
 
 
@@ -190,7 +190,7 @@ binary_group <- es.dif$quiescence.group
 z_scores <- data.frame(z_scores, binary_group)
 rownames(z_scores) <- rownames(es.dif)
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Results/")
-save(z_scores, file = "GSE75367_QS.RData")
+#save(z_scores, file = "GSE75367_QS.RData")
 
 
 
@@ -218,7 +218,7 @@ binary_group <- es.dif$Group
 z_scores <- data.frame(Combined_z_score, binary_group)
 rownames(z_scores) <- patient_ID
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Results/")
-save(z_scores, file = "GSE83142_QS.RData")
+#save(z_scores, file = "GSE83142_QS.RData")
 
 
 
@@ -254,7 +254,7 @@ z_score <- es.dif$GSVA_score
 z_score_common <- data.frame(z_score, binary_groups)
 rownames(z_score_common) <- Sample
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Results/")
-save(z_score_common, file = "GSE93991_QS.RData")
+#save(z_score_common, file = "GSE93991_QS.RData")
 
 
 
@@ -356,7 +356,7 @@ merged_data <- rbind(GSE114012,GSE131594,GSE137912,GSE152699,GSE75367,GSE83142,G
 myCol <- brewer.pal(7, "Spectral")
 setwd("~/Documents/GitHub/CancerDormancy/QuiescenceScoreValidation/Figures/")
 basicplot <- ggplot(merged_data, aes(d = binary_groups, m = `Combined z-score`, color = Dataset)) + geom_roc(n.cuts = 10, labels = FALSE) + annotate("text", x = .8, y = .14,
-label = "GSE114012 AUC = 0.766\nGSE131594 AUC = 0.965\nGSE137912 AUC = 0.986\nGSE152699 AUC = 1.000\nGSE75367 AUC = 0.928\nGSE83142 AUC = 0.922\nGSE93991 AUC = 0.778")
+label = "GSE114012 AUC = 0.766\nGSE131594 AUC = 0.965\nGSE137912 AUC = 0.986\nGSE152699 AUC = 1.000\nGSE75367 AUC = 0.928\nGSE83142 AUC = 0.922\nGSE93991 AUC = 0.815")
 pdf("QuiescenceScoreValidation_ROC.pdf",height = 5, width = 7)
 basicplot + labs(x = "False positive fraction", y = "True positive fraction") + theme_classic() +
   theme(axis.text.x = element_text(color = "grey20",face = "plain",size = 12,family = "sans"),
