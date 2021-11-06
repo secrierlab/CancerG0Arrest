@@ -1,0 +1,223 @@
+﻿MGI Gene/Marker ID,Symbol,Name,Chr,Qualifier,Annotated Term,Context,Proteoform,Evidence,Inferred From,Reference(s)
+MGI:1918520,4933438K21Rik,RIKEN cDNA 4933438K21 gene,4,,cellular response to starvation,,,IDA,,J:193325 
+MGI:87991,Alb,albumin,5,,cellular response to starvation,,,ISO,P02768 ,J:164563 
+MGI:1888999,Angptl4,angiopoietin-like 4,17,,cellular response to starvation,,,NAS,,J:64473 
+MGI:1923757,Aoc1,"amine oxidase, copper-containing 1",6,,cellular response to copper ion starvation,,,ISO,RGD:61296 ,J:155856 
+MGI:1923757,Aoc1,"amine oxidase, copper-containing 1",6,,cellular response to copper ion starvation,,,ISO,P19801 ,J:164563 
+MGI:1350929,Asns,asparagine synthetase,6,,cellular response to glucose starvation,,,ISO,P08243 ,J:164563 
+MGI:109384,Atf3,activating transcription factor 3,1,,cellular response to amino acid starvation,,,IMP,,J:124910 
+MGI:88096,Atf4,activating transcription factor 4,15,,cellular response to amino acid starvation,,,IDA,,J:99455 
+MGI:88096,Atf4,activating transcription factor 4,15,,cellular response to amino acid starvation,,,IMP,,J:124910 J:137331 
+MGI:88096,Atf4,activating transcription factor 4,15,,cellular response to glucose starvation,,,ISO,P18848 ,J:164563 
+MGI:1913865,Atg4b,"autophagy related 4B, cysteine peptidase",1,,cellular response to starvation,,,IMP,,J:219972 
+MGI:1277186,Atg5,autophagy related 5,10,,cellular response to nitrogen starvation,,,IBA,PTN000315667 ,J:265628 
+MGI:1277186,Atg5,autophagy related 5,10,,cellular response to starvation,,,IMP,,J:197783 
+MGI:1921494,Atg7,autophagy related 7,6,,cellular response to nitrogen starvation,,,IBA,PTN000102341 ,J:265628 
+MGI:1921494,Atg7,autophagy related 7,6,,cellular response to starvation,,,IMP,,J:197783 
+MGI:1921494,Atg7,autophagy related 7,6,,cellular response to starvation,,,ISO,O95352 ,J:164563 
+MGI:1261775,Atg14,autophagy related 14,14,,cellular response to glucose starvation,,,IDA,,J:219056 
+MGI:1261775,Atg14,autophagy related 14,14,,cellular response to starvation,,,IBA,PTN001784663 ,J:265628 
+MGI:1261775,Atg14,autophagy related 14,14,,cellular response to starvation,,,ISO,Q6ZNE5 ,J:164563 
+MGI:2670984,BC048403,cDNA sequence BC048403,10,,cellular response to amino acid starvation,,,IBA,PTN001268917 ,J:265628 
+MGI:2670984,BC048403,cDNA sequence BC048403,10,,cellular response to amino acid starvation,,,ISO,Q96MD2 ,J:164563 
+MGI:2670984,BC048403,cDNA sequence BC048403,10,,cellular response to glucose starvation,,,IBA,PTN001268917 ,J:265628 
+MGI:2670984,BC048403,cDNA sequence BC048403,10,,cellular response to glucose starvation,,,ISO,Q96MD2 ,J:164563 
+MGI:88138,Bcl2,B cell leukemia/lymphoma 2,1,,cellular response to glucose starvation,,,IDA,,J:29779 
+MGI:1891828,Becn1,"beclin 1, autophagy related",11,,cellular response to glucose starvation,,,IDA,,J:219056 
+MGI:1891828,Becn1,"beclin 1, autophagy related",11,,cellular response to nitrogen starvation,,,IBA,PTN000298965 ,J:265628 
+MGI:2684950,Becn2,beclin 2,1,,cellular response to nitrogen starvation,,,IBA,PTN000298965 ,J:265628 
+MGI:891976,Bhlha15,"basic helix-loop-helix family, member a15",5,,cellular response to glucose starvation,,,IDA,,J:215889 
+MGI:2176433,Bmf,BCL2 modifying factor,2,,cellular response to starvation,,,IMP,,J:197027 
+MGI:2141466,Bmt2,base methyltransferase of 25S rRNA 2,6,,cellular response to amino acid starvation,,,ISO,Q1RMZ1 ,J:164563 
+MGI:2685946,Brsk1,BR serine/threonine kinase 1,7,,cellular response to glucose starvation,,,IBA,PTN001217363 ,J:265628 
+MGI:1923020,Brsk2,BR serine/threonine kinase 2,7,,cellular response to glucose starvation,,,IBA,PTN001217363 ,J:265628 
+MGI:2443963,Cadps2,Ca2+-dependent activator protein for secretion 2,6,,cellular response to starvation,,,IEP,,J:193325 
+MGI:1351330,Cartpt,CART prepropeptide,13,,cellular response to starvation,,,IBA,PTN000422234 ,J:265628 
+MGI:1351330,Cartpt,CART prepropeptide,13,,cellular response to starvation,,,IDA,,J:47476 
+MGI:1351330,Cartpt,CART prepropeptide,13,,cellular response to starvation,,,ISO,RGD:2272 ,J:155856 
+MGI:104556,Cdkn1a,cyclin-dependent kinase inhibitor 1A (P21),17,,cellular response to amino acid starvation,,,IMP,,J:227362 
+MGI:104556,Cdkn1a,cyclin-dependent kinase inhibitor 1A (P21),17,,cellular response to amino acid starvation,,,ISO,P38936 ,J:164563 
+MGI:1921624,Clec16a,"C-type lectin domain family 16, member A",16,,cellular response to starvation,,,ISO,Q2KHT3 ,J:164563 
+MGI:88470,Comt,catechol-O-methyltransferase,16,,cellular response to phosphate starvation,,,IDA,,J:200928 
+MGI:1914829,Cpeb4,cytoplasmic polyadenylation element binding protein 4,11,,cellular response to glucose starvation,,,ISO,RGD:1311931 ,J:155856 
+MGI:1918190,Dap,death-associated protein,15,,cellular response to amino acid starvation,,,IBA,PTN000323543 ,J:265628 
+MGI:1918190,Dap,death-associated protein,15,,cellular response to amino acid starvation,,,ISO,P51397 ,J:164563 
+MGI:1923997,Dapl1,death associated protein-like 1,2,,cellular response to amino acid starvation,,,IBA,PTN000323543 ,J:265628 
+MGI:2141101,Depdc5,DEP domain containing 5,5,,cellular response to amino acid starvation,,,IBA,PTN000323637 ,J:265628 
+MGI:2141101,Depdc5,DEP domain containing 5,5,,cellular response to amino acid starvation,,,ISO,O75140 ,J:164563 
+MGI:1913398,Dnajc15,DnaJ heat shock protein family (Hsp40) member C15,14,,cellular response to starvation,,,IMP,MGI:4329547 ,J:204025 
+MGI:103221,Dsc2,desmocollin 2,18,,cellular response to starvation,,,IEP,,J:193325 
+MGI:2148922,Ehmt2,euchromatic histone lysine N-methyltransferase 2,17,,cellular response to starvation,,,ISO,Q96KQ7 ,J:73065 
+MGI:1353449,Eif2ak2,eukaryotic translation initiation factor 2-alpha kinase 2,17,,cellular response to amino acid starvation,,,ISO,P19525 ,J:164563 
+MGI:1341830,Eif2ak3,eukaryotic translation initiation factor 2 alpha kinase 3,6,,cellular response to amino acid starvation,,,ISO,Q9NZJ5 ,J:164563 
+MGI:1341830,Eif2ak3,eukaryotic translation initiation factor 2 alpha kinase 3,6,,cellular response to glucose starvation,,,IMP,,J:215862 
+MGI:1341830,Eif2ak3,eukaryotic translation initiation factor 2 alpha kinase 3,6,,cellular response to glucose starvation,,,ISO,Q9NZJ5 ,J:164563 
+MGI:1353427,Eif2ak4,eukaryotic translation initiation factor 2 alpha kinase 4,2,,cellular response to amino acid starvation,,,IDA,,J:211861 
+MGI:1353427,Eif2ak4,eukaryotic translation initiation factor 2 alpha kinase 4,2,,cellular response to amino acid starvation,,,IMP,,J:124910 
+MGI:1353427,Eif2ak4,eukaryotic translation initiation factor 2 alpha kinase 4,2,,cellular response to amino acid starvation,,,ISO,Q9P2K8 ,J:164563 
+MGI:1353427,Eif2ak4,eukaryotic translation initiation factor 2 alpha kinase 4,2,,cellular response to leucine starvation,,,IDA,,J:197824 
+MGI:1353427,Eif2ak4,eukaryotic translation initiation factor 2 alpha kinase 4,2,,cellular response to starvation,,,IDA,,J:100824 
+MGI:1353427,Eif2ak4,eukaryotic translation initiation factor 2 alpha kinase 4,2,,positive regulation of translational initiation in response to starvation,,,IDA,,J:71261 
+MGI:1353427,Eif2ak4,eukaryotic translation initiation factor 2 alpha kinase 4,2,,positive regulation of translational initiation in response to starvation,,,IMP,,J:100646 
+MGI:95299,Eif2s1,"eukaryotic translation initiation factor 2, subunit 1 alpha",12,,cellular response to amino acid starvation,,,IDA,,J:99455 
+MGI:1923930,Elapor1,endosome-lysosome associated apoptosis and autophagy regulator 1,3,,cellular response to starvation,,,ISO,Q6UXG2 ,J:164563 
+MGI:1923517,Fads1,fatty acid desaturase 1,19,,cellular response to starvation,,,ISO,O60427 ,J:164563 
+MGI:95484,Fas,Fas (TNF receptor superfamily member 6),19,,cellular response to amino acid starvation,,,ISO,P25445 ,J:164563 
+MGI:1926014,Fbxo22,F-box protein 22,9,,cellular response to starvation,,,IDA,,J:147457 
+MGI:1915484,Fcor,Foxo1 corepressor,8,,cellular response to starvation,,,IDA,,J:184684 
+MGI:2442184,Flcn,folliculin,11,,cellular response to amino acid starvation,,,ISO,Q8NFG4 ,J:164563 
+MGI:2442184,Flcn,folliculin,11,,cellular response to starvation,,,ISO,Q8NFG4 ,J:164563 
+MGI:2444668,Fnip1,folliculin interacting protein 1,11,,cellular response to starvation,happens in precursor B cell,,IMP,MGI:5437714 ,J:187318 
+MGI:1347477,Foxa3,forkhead box A3,7,,cellular response to starvation,,,IMP,MGI:2178218 ,J:72595 
+MGI:1890077,Foxo1,forkhead box O1,3,,cellular response to starvation,,,ISO,Q12778 ,J:164563 
+MGI:1890081,Foxo3,forkhead box O3,10,,cellular response to glucose starvation,,,ISO,O43524 ,J:164563 
+MGI:1861742,Gabarap,gamma-aminobutyric acid receptor associated protein,11,,cellular response to nitrogen starvation,,,IBA,PTN000103522 ,J:265628 
+MGI:1914980,Gabarapl1,gamma-aminobutyric acid (GABA) A receptor-associated protein-like 1,6,,cellular response to nitrogen starvation,,,IBA,PTN000103522 ,J:265628 
+MGI:1890602,Gabarapl2,gamma-aminobutyric acid (GABA) A receptor-associated protein-like 2,8,,cellular response to nitrogen starvation,,,IBA,PTN000103522 ,J:265628 
+MGI:1926176,Gas2l1,growth arrest-specific 2 like 1,11,,cellular response to starvation,,,IDA,,J:92365 
+MGI:95660,Gas6,growth arrest specific 6,8,,cellular response to starvation,,,IDA,,J:63534 
+MGI:95665,Gba,"glucosidase, beta, acid",3,,cellular response to starvation,"happens in midbrain,happens in neuron",,IMP,,J:199258 
+MGI:99572,Gcgr,glucagon receptor,11,,cellular response to starvation,happens in liver,,IMP,,J:194781 
+MGI:1270854,Gck,glucokinase,11,,cellular response to glucose starvation,,,ISO,RGD:2670 ,J:155856 
+MGI:2444248,Gcn1,GCN1 activator of EIF2AK4,5,,cellular response to amino acid starvation,,,IDA,,J:211861 
+MGI:2444248,Gcn1,GCN1 activator of EIF2AK4,5,,cellular response to leucine starvation,,,IDA,,J:197824 
+MGI:95739,Glul,glutamate-ammonia ligase (glutamine synthetase),1,,cellular response to starvation,,,IEP,,J:193325 
+MGI:1930666,Higd1a,"HIG1 domain family, member 1A",9,,cellular response to glucose starvation,,,IDA,,J:111830 
+MGI:1930666,Higd1a,"HIG1 domain family, member 1A",9,,cellular response to glucose starvation,,,IMP,,J:222038 
+MGI:104816,Hnrnpl,heterogeneous nuclear ribonucleoprotein L,7,,cellular response to amino acid starvation,,,ISO,RGD:71059 ,J:155856 
+MGI:1201608,Hrk,"harakiri, BCL2 interacting protein (contains only BH3 domain)",5,,cellular response to potassium ion starvation,,,ISO,RGD:70549 ,J:155856 
+MGI:95835,Hspa5,heat shock protein 5,2,,cellular response to glucose starvation,,,ISO,P11021 ,J:164563 
+MGI:1098233,Impact,"impact, RWD domain protein",18,,cellular response to amino acid starvation,,,IDA,,J:211861 
+MGI:1098233,Impact,"impact, RWD domain protein",18,,cellular response to glucose starvation,,,IDA,,J:211861 
+MGI:1098233,Impact,"impact, RWD domain protein",18,,cellular response to leucine starvation,,,IDA,,J:197824 
+MGI:1098233,Impact,"impact, RWD domain protein",18,,positive regulation of translational initiation in response to starvation,,,IMP,,J:197824 
+MGI:1915450,Itfg2,integrin alpha FG-GAP repeat containing 2,6,,cellular response to amino acid starvation,,,ISO,Q969R8 ,J:164563 
+MGI:1915450,Itfg2,integrin alpha FG-GAP repeat containing 2,6,,cellular response to glucose starvation,,,ISO,Q969R8 ,J:164563 
+MGI:96646,Jun,jun proto-oncogene,4,,cellular response to potassium ion starvation,,,ISO,RGD:2943 ,J:155856 
+MGI:1101353,Klf10,Kruppel-like factor 10,15,,cellular response to starvation,,,IDA,,J:158422 
+MGI:1890380,Kptn,kaptin,7,,cellular response to amino acid starvation,,,IBA,PTN000396361 ,J:265628 
+MGI:1890380,Kptn,kaptin,7,,cellular response to amino acid starvation,,,ISO,Q9Y664 ,J:164563 
+MGI:1890380,Kptn,kaptin,7,,cellular response to glucose starvation,,,ISO,Q9Y664 ,J:164563 
+MGI:1914059,Krt20,keratin 20,11,,cellular response to starvation,,,IDA,,J:125620 
+MGI:96748,Lamp2,lysosomal-associated membrane protein 2,X,,cellular response to starvation,,,IBA,PTN002608933 ,J:265628 
+MGI:96748,Lamp2,lysosomal-associated membrane protein 2,X,,cellular response to starvation,,,IMP,,J:236240 
+MGI:1913808,Lars,leucyl-tRNA synthetase,18,,cellular response to amino acid starvation,,,ISO,Q9P2J5 ,J:164563 
+MGI:1913808,Lars,leucyl-tRNA synthetase,18,,cellular response to leucine starvation,,,ISO,Q9P2J5 ,J:164563 
+MGI:1913975,Lrrk2,leucine-rich repeat kinase 2,15,,cellular response to starvation,,,ISO,Q5S007 ,J:164563 
+MGI:1915661,Map1lc3a,microtubule-associated protein 1 light chain 3 alpha,2,,cellular response to nitrogen starvation,,,IBA,PTN000103522 ,J:265628 
+MGI:1915661,Map1lc3a,microtubule-associated protein 1 light chain 3 alpha,2,,cellular response to starvation,,,ISO,Q9H492 ,J:164563 
+MGI:1914693,Map1lc3b,microtubule-associated protein 1 light chain 3 beta,8,,cellular response to nitrogen starvation,,,IBA,PTN000103522 ,J:265628 
+MGI:1914693,Map1lc3b,microtubule-associated protein 1 light chain 3 beta,8,,cellular response to starvation,,,ISO,Q9GZQ8 ,J:164563 
+MGI:1346876,Map3k5,mitogen-activated protein kinase kinase kinase 5,10,,cellular response to amino acid starvation,,,ISO,Q99683 ,J:164563 
+MGI:1346858,Mapk1,mitogen-activated protein kinase 1,16,,cellular response to amino acid starvation,,,ISO,P28482 ,J:164563 
+MGI:1346859,Mapk3,mitogen-activated protein kinase 3,7,,cellular response to amino acid starvation,,,ISO,P27361 ,J:164563 
+MGI:1346861,Mapk8,mitogen-activated protein kinase 8,14,,cellular response to amino acid starvation,,,ISO,P45983 ,J:164563 
+MGI:1345633,Mars1,methionine-tRNA synthetase 1,10,,cellular response to starvation,,,ISO,P56192 ,J:164563 
+MGI:1923824,Mfsd2a,major facilitator superfamily domain containing 2A,4,,cellular response to starvation,,,IMP,,J:194781 
+MGI:2182066,Mios,meiosis regulator for oocyte development,6,,cellular response to amino acid starvation,,,IBA,PTN000419916 ,J:265628 
+MGI:2182066,Mios,meiosis regulator for oocyte development,6,,cellular response to amino acid starvation,,,ISO,Q9NXC5 ,J:164563 
+MGI:1921552,Mtmr3,myotubularin related protein 3,11,,cellular response to glucose starvation,,,ISO,Q13615 ,J:164563 
+MGI:1928394,Mtor,mechanistic target of rapamycin kinase,4,,cellular response to amino acid starvation,,,ISO,P42345 ,J:164563 
+MGI:1928394,Mtor,mechanistic target of rapamycin kinase,4,,cellular response to leucine starvation,,,ISO,P42345 ,J:164563 
+MGI:1928394,Mtor,mechanistic target of rapamycin kinase,4,,cellular response to starvation,,,ISO,P42345 ,J:164563 
+MGI:106181,Mybbp1a,MYB binding protein (P160) 1a,11,,cellular response to glucose starvation,,,ISO,Q9BQG0 ,J:164563 
+MGI:1339967,Myh13,"myosin, heavy polypeptide 13, skeletal muscle",11,,cellular response to starvation,,,IDA,,J:147457 
+MGI:97275,Myod1,myogenic differentiation 1,7,,cellular response to starvation,,,IDA,,J:147457 
+MGI:108420,Nfe2l2,"nuclear factor, erythroid derived 2, like 2",2,,cellular response to glucose starvation,,,IMP,,J:218003 
+MGI:2442399,Nim1k,NIM1 serine/threonine protein kinase,13,,cellular response to glucose starvation,,,IBA,PTN001217363 ,J:265628 
+MGI:1914482,Nprl2,"NPR2 like, GATOR1 complex subunit",9,,cellular response to amino acid starvation,,,IBA,PTN000988255 ,J:265628 
+MGI:1914482,Nprl2,"NPR2 like, GATOR1 complex subunit",9,,cellular response to amino acid starvation,,,ISO,Q8WTW4 ,J:164563 
+MGI:1914482,Nprl2,"NPR2 like, GATOR1 complex subunit",9,,cellular response to nitrogen starvation,,,IBA,PTN000988255 ,J:265628 
+MGI:109258,Nprl3,nitrogen permease regulator-like 3,11,,cellular response to amino acid starvation,,,IBA,PTN000994527 ,J:265628 
+MGI:109258,Nprl3,nitrogen permease regulator-like 3,11,,cellular response to amino acid starvation,,,ISO,Q12980 ,J:164563 
+MGI:1925226,Nuak1,"NUAK family, SNF1-like kinase, 1",10,,cellular response to glucose starvation,,,IBA,PTN001217363 ,J:265628 
+MGI:1921387,Nuak2,"NUAK family, SNF1-like kinase, 2",1,,cellular response to glucose starvation,,,IBA,PTN001217363 ,J:265628 
+MGI:1921387,Nuak2,"NUAK family, SNF1-like kinase, 2",1,,cellular response to glucose starvation,,,ISO,RGD:1359167 ,J:155856 
+MGI:1921387,Nuak2,"NUAK family, SNF1-like kinase, 2",1,,cellular response to glucose starvation,,,ISO,Q9H093 ,J:164563 
+MGI:1923099,Nupr1l,nuclear protein transcriptional regulator 1 like,5,,cellular response to starvation,,,ISO,A6NF83 ,J:164563 
+MGI:97501,Pck1,"phosphoenolpyruvate carboxykinase 1, cytosolic",2,,cellular response to potassium ion starvation,,,IDA,,J:150742 
+MGI:2140260,Pcsk9,proprotein convertase subtilisin/kexin type 9,4,,cellular response to starvation,,,IDA,,J:118822 
+MGI:2140260,Pcsk9,proprotein convertase subtilisin/kexin type 9,4,,cellular response to starvation,,,ISO,RGD:728909 ,J:155856 
+MGI:1351481,Pdk4,"pyruvate dehydrogenase kinase, isoenzyme 4",6,,cellular response to starvation,,,ISO,Q16654 ,J:164563 
+MGI:894645,Pick1,protein interacting with C kinase 1,15,,cellular response to glucose starvation,,,ISO,RGD:69437 ,J:155856 
+MGI:1203729,Pik3c2a,phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 alpha,7,,cellular response to starvation,,,IGI,MGI:2685045 ,J:209036 
+MGI:2685045,Pik3c2b,phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 beta,1,,cellular response to starvation,,,IGI,MGI:1203729 ,J:209036 
+MGI:2445019,Pik3c3,phosphatidylinositol 3-kinase catalytic subunit type 3,18,,cellular response to glucose starvation,,,IDA,,J:219056 
+MGI:2445019,Pik3c3,phosphatidylinositol 3-kinase catalytic subunit type 3,18,,cellular response to starvation,,,IMP,,J:209036 
+MGI:1922919,Pik3r4,phosphoinositide-3-kinase regulatory subunit 4,9,,cellular response to glucose starvation,,,IDA,,J:219056 
+MGI:104740,Ppara,peroxisome proliferator activated receptor alpha,15,,cellular response to starvation,happens in liver,,IMP,,J:194781 
+MGI:2145955,Prkaa1,"protein kinase, AMP-activated, alpha 1 catalytic subunit",15,,cellular response to glucose starvation,,,IDA,,J:175316 
+MGI:1336173,Prkaa2,"protein kinase, AMP-activated, alpha 2 catalytic subunit",4,,cellular response to glucose starvation,,,IDA,,J:175316 J:219056 
+MGI:108411,Prkag1,"protein kinase, AMP-activated, gamma 1 non-catalytic subunit",15,,cellular response to glucose starvation,,,IBA,PTN000350000 ,J:265628 
+MGI:1336153,Prkag2,"protein kinase, AMP-activated, gamma 2 non-catalytic subunit",5,,cellular response to glucose starvation,,,IBA,PTN000350000 ,J:265628 
+MGI:1891343,Prkag3,"protein kinase, AMP-activated, gamma 3 non-catalytic subunit",1,,cellular response to glucose starvation,,,IBA,PTN000350000 ,J:265628 
+MGI:99879,Prkd1,protein kinase D1,12,,cellular response to amino acid starvation,,,ISO,Q15139 ,J:164563 
+MGI:1927244,Ralb,v-ral simian leukemia viral oncogene B,1,,cellular response to starvation,,,ISO,P11234 ,J:164563 
+MGI:1922937,Ripor1,RHO family interacting cell polarization regulator 1,8,,cellular response to starvation,,,ISO,Q6ZS17 ,J:164563 
+MGI:1926217,Rnase4,"ribonuclease, RNase A family 4",14,,cellular response to starvation,,,IEP,,J:193325 
+MGI:2443787,Rnf152,ring finger protein 152,1,,cellular response to amino acid starvation,,,IBA,PTN000715095 ,J:265628 
+MGI:2443787,Rnf152,ring finger protein 152,1,,cellular response to amino acid starvation,,,IDA,,J:222252 
+MGI:2443787,Rnf152,ring finger protein 152,1,,cellular response to amino acid starvation,,,ISO,Q8N8N0 ,J:164563 
+MGI:1921620,Rptor,"regulatory associated protein of MTOR, complex 1",11,,cellular response to starvation,,,IBA,PTN000304084 ,J:265628 
+MGI:1915691,Rraga,Ras-related GTP binding A,4,,cellular response to amino acid starvation,,,ISO,Q7L523 ,J:164563 
+MGI:1915691,Rraga,Ras-related GTP binding A,4,,cellular response to starvation,,,IBA,PTN000136006 ,J:265628 
+MGI:3038613,Rragb,Ras-related GTP binding B,X,,cellular response to amino acid starvation,,,ISO,Q5VZM2 ,J:164563 
+MGI:3038613,Rragb,Ras-related GTP binding B,X,,cellular response to leucine starvation,,,ISO,Q5VZM2 ,J:164563 
+MGI:3038613,Rragb,Ras-related GTP binding B,X,,cellular response to starvation,,,IBA,PTN000136006 ,J:265628 
+MGI:1858751,Rragc,Ras-related GTP binding C,4,,cellular response to amino acid starvation,,,ISO,Q9HB90 ,J:164563 
+MGI:1858751,Rragc,Ras-related GTP binding C,4,,cellular response to starvation,,,IBA,PTN000136006 ,J:265628 
+MGI:1098604,Rragd,Ras-related GTP binding D,4,,cellular response to leucine starvation,,,ISO,Q9NQL2 ,J:164563 
+MGI:1098604,Rragd,Ras-related GTP binding D,4,,cellular response to starvation,,,IBA,PTN000136006 ,J:265628 
+MGI:1914251,Rrp8,ribosomal RNA processing 8,7,,cellular response to glucose starvation,,,IBA,PTN000980278 ,J:265628 
+MGI:1914251,Rrp8,ribosomal RNA processing 8,7,,cellular response to glucose starvation,,,ISO,O43159 ,J:164563 
+MGI:1919374,Seh1l,SEH1-like (S. cerevisiae,18,,cellular response to amino acid starvation,,,IBA,PTN000111887 ,J:265628 
+MGI:1919374,Seh1l,SEH1-like (S. cerevisiae,18,,cellular response to amino acid starvation,,,ISO,Q96EE3 ,J:164563 
+MGI:2155278,Sesn1,sestrin 1,10,,cellular response to amino acid starvation,,,ISO,Q9Y6P5 ,J:164563 
+MGI:2155278,Sesn1,sestrin 1,10,,cellular response to glucose starvation,,,ISO,Q9Y6P5 ,J:164563 
+MGI:2155278,Sesn1,sestrin 1,10,,cellular response to leucine starvation,,,IBA,PTN000280005 ,J:265628 
+MGI:2651874,Sesn2,sestrin 2,4,,cellular response to amino acid starvation,,,ISO,P58004 ,J:164563 
+MGI:2651874,Sesn2,sestrin 2,4,,cellular response to glucose starvation,,,ISO,P58004 ,J:164563 
+MGI:2651874,Sesn2,sestrin 2,4,,cellular response to leucine starvation,,,IBA,PTN000280005 ,J:265628 
+MGI:2651874,Sesn2,sestrin 2,4,,cellular response to leucine starvation,,,ISO,P58004 ,J:164563 
+MGI:1922997,Sesn3,sestrin 3,9,,cellular response to amino acid starvation,,,ISO,P58005 ,J:164563 
+MGI:1922997,Sesn3,sestrin 3,9,,cellular response to glucose starvation,,,ISO,P58005 ,J:164563 
+MGI:1922997,Sesn3,sestrin 3,9,,cellular response to leucine starvation,,,IBA,PTN000280005 ,J:265628 
+MGI:1859730,Sh3glb1,SH3-domain GRB2-like B1 (endophilin),3,,cellular response to amino acid starvation,,,ISO,Q9Y371 ,J:164563 
+MGI:1859730,Sh3glb1,SH3-domain GRB2-like B1 (endophilin),3,,cellular response to glucose starvation,,,ISO,Q9Y371 ,J:164563 
+MGI:104754,Sik1,salt inducible kinase 1,17,,cellular response to glucose starvation,,,IBA,PTN001217363 ,J:265628 
+MGI:2445031,Sik2,salt inducible kinase 2,9,,cellular response to glucose starvation,,,IBA,PTN001217363 ,J:265628 
+MGI:2135607,Sirt1,sirtuin 1,10,,cellular response to starvation,,,IMP,,J:91106 
+MGI:95755,Slc2a1,"solute carrier family 2 (facilitated glucose transporter), member 1",4,,cellular response to glucose starvation,,,IDA,,J:68200 
+MGI:1923507,Slc38a3,"solute carrier family 38, member 3",9,,cellular response to potassium ion starvation,,,IDA,,J:150742 
+MGI:1919277,Slc39a4,"solute carrier family 39 (zinc transporter), member 4",15,,cellular response to zinc ion starvation,,,IDA,,J:94994 
+MGI:1919336,Slc39a5,"solute carrier family 39 (metal ion transporter), member 5",10,,cellular response to zinc ion starvation,,,IDA,,J:94994 
+MGI:107606,Srebf1,sterol regulatory element binding transcription factor 1,11,,cellular response to starvation,,,IDA,,J:118822 
+MGI:107606,Srebf1,sterol regulatory element binding transcription factor 1,11,,cellular response to starvation,,,ISO,RGD:69423 ,J:155856 
+MGI:107585,Srebf2,sterol regulatory element binding factor 2,15,,cellular response to starvation,,,ISO,Q12772 ,J:164563 
+MGI:2385007,Stk24,serine/threonine kinase 24,14,,cellular response to starvation,,,ISO,Q9Y6E0 ,J:164563 
+MGI:1917665,Stk26,serine/threonine kinase 26,X,,cellular response to starvation,,,ISO,Q9P289 ,J:164563 
+MGI:3033336,Szt2,SZT2 subunit of KICSTOR complex,4,,cellular response to amino acid starvation,,,ISO,Q5T011 ,J:164563 
+MGI:3033336,Szt2,SZT2 subunit of KICSTOR complex,4,,cellular response to glucose starvation,,,ISO,Q5T011 ,J:164563 
+MGI:1351652,Tbl2,transducin (beta)-like 2,5,,cellular response to glucose starvation,,,ISO,Q9Y4P3 ,J:164563 
+MGI:1202879,Tcf7l2,"transcription factor 7 like 2, T cell specific, HMG box",19,,cellular response to starvation,,,IMP,MGI:5430317 ,J:193325 
+MGI:103270,Tfeb,transcription factor EB,17,,cellular response to amino acid starvation,,,ISO,P19484 ,J:164563 
+MGI:103270,Tfeb,transcription factor EB,17,,cellular response to starvation,,,ISO,P19484 ,J:164563 
+MGI:2385292,Tnrc6a,trinucleotide repeat containing 6a,7,,cellular response to starvation,,,IDA,,J:93906 
+MGI:98834,Trp53,transformation related protein 53,11,,cellular response to glucose starvation,,,ISO,P04637 ,J:73065 
+MGI:1270126,Ulk1,unc-51 like kinase 1,5,,cellular response to amino acid starvation,,,IGI,O70405 ,J:215871 
+MGI:2159711,Usp33,ubiquitin specific peptidase 33,3,,cellular response to starvation,,,ISO,Q8TEY7 ,J:164563 
+MGI:1929215,Vps41,VPS41 HOPS complex subunit,13,,cellular response to starvation,,,IBA,PTN000289375 ,J:265628 
+MGI:2446285,Wdr24,WD repeat domain 24,17,,cellular response to amino acid starvation,,,ISO,Q96S15 ,J:164563 
+MGI:1859606,Wdr45,WD repeat domain 45,X,,cellular response to starvation,,,ISO,Q9Y484 ,J:164563 
+MGI:1914090,Wdr45b,WD repeat domain 45B,11,,cellular response to starvation,,,ISO,Q5MNZ6 ,J:164563 
+MGI:2442115,Wdr59,WD repeat domain 59,8,,cellular response to amino acid starvation,,,ISO,Q6PJI9 ,J:164563 
+MGI:1261864,Wipi1,"WD repeat domain, phosphoinositide interacting 1",11,,cellular response to starvation,,,ISO,Q5MNZ9 ,J:164563 
+MGI:1923831,Wipi2,"WD repeat domain, phosphoinositide interacting 2",5,,cellular response to starvation,,,ISO,Q9Y4P8 ,J:164563 
+MGI:1261834,Wnt2b,"wingless-type MMTV integration site family, member 2B",3,,cellular response to starvation,,,IEP,,J:193325 
+MGI:98957,Wnt4,"wingless-type MMTV integration site family, member 4",4,,cellular response to starvation,,,IEP,,J:193325 
+MGI:1197020,Wnt9b,"wingless-type MMTV integration site family, member 9B",11,,cellular response to starvation,,,IEP,,J:193325 
+MGI:109635,Wrn,Werner syndrome RecQ like helicase,8,,cellular response to starvation,,,ISO,Q14191 ,J:69659 
+MGI:98970,Xbp1,X-box binding protein 1,11,,cellular response to glucose starvation,,,IDA,,J:215889 
+MGI:97932,Xpr1,xenotropic and polytropic retrovirus receptor 1,1,,cellular response to phosphate starvation,,,IBA,PTN000081884 ,J:265628 
+MGI:2385891,Zc3h12a,zinc finger CCCH type containing 12A,4,,cellular response to glucose starvation,,,IDA,,J:178149 
+MGI:3026685,Zfyve1,"zinc finger, FYVE domain containing 1",12,,cellular response to starvation,,,ISO,Q9HBF4 ,J:164563 
