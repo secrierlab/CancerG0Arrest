@@ -592,7 +592,7 @@ results$SampleType <- sapply(results$Sample, function(x)
 results$SampleType <- factor(results$SampleType, levels = c("scRNA-seq","RNA-seq reference"))
 
 #Plot
-setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Figures/")
+setwd("~/Documents/GitHub/CancerDormancy/QuiescenceTypeClassification/scRNAseq_classification/Figures/")
 plot <- ggplot(results, aes(x= PC1, y=PC2, color = QuiescenceType, shape = SampleType)) + geom_point(aes(shape=SampleType, color=QuiescenceType), alpha = 0.7, size =1)
 pdf("GSE134839_knn.pdf", width = 9, height = 3)
 plot + scale_colour_manual(values = c("cdk" = "firebrick3", "contact" = "royalblue4", "mek" = "lightskyblue", "serum" = "goldenrod1", "spontaneous" = "mediumorchid4","uncertain" = "grey81", "Proliferating" = "mediumseagreen")) + facet_wrap(~Day,nrow = 1) + theme_classic() + scale_size_manual(values=c(1, 1))
