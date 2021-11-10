@@ -11,11 +11,15 @@ This repository contains code for the evaluation of cellular dormancy/quiescence
 This folder contains the code which explores the association between breast cancer dormancy and genomic features shown to be linked with this state by a breast cancer specific random forest model.
 
 - **BRCA_quiescence_apobec_sbs2_association_heatmap.R:** shows the association between dormancy scores, APOBEC enrichment and breast cancer subtypes in the TCGA cohort 
-- **BRCA_subtype_SBS2_prevelance.R:** compares levels of APOBEC-linked SBS2 mutational burden across breast cancer subtypes within the TCGA cohort
+- **BRCA_subtype_SBS2_prevelance.R:** compares levels of APOBEC-linked SBS2 mutational burden across breast cancer subtypes within the TCGA cohort.
 
 ## CEP89_QuiescenceAssociation
 
 This folder cotains code which explores the impact of CEP89 activity on quiescence-proliferation decisions.
+
+- **TCGA_CEP89_status_vs_CA20.R:** shows the association between CEP89 amplification status and CA20 scores (refelctive of centromere amplification).
+- **TCGA_CoxProportionalHazardsModelCEP89_stratification.R:** calculates Cox proportional hazards analysis estimates for the impact of CEP89 expression on patient prognosis within individual cancer studies.
+- **TCGA_QuiescenceScore_vs_CA20.R:** shows the pan-cancer relationship between CA20 scores (refelctive of centromere amplification) and tumour quiescence across the TCGA cohort.
 
 ## PanCancer_ElasticNetRegression
 
