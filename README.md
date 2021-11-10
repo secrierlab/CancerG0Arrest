@@ -49,6 +49,9 @@ This folder contains code used to validate the combined z-score quiescence scori
 
 This folder contains code used to estimate the dominant form of quiescence across different TCGA cohort cancer types and in scRNA-seq datasets.
 
+- **TCGA_QuiescenceTypeClassification.R:** identifies the the main quiescence programme within highly dormant TCGA samples.
+- **GSE134839_knn.R:** performs knn analysis to classify dormant NSCLC cells into individual quiescence type categories
+
 ## TCGA_DataDownload_and_Processing
 
 This folder contains code used to download and process TCGA expression, copy-number variation and mutational data.
