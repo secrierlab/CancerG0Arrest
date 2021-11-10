@@ -4,26 +4,26 @@ This repository contains code for the evaluation of cellular dormancy/quiescence
 
 ![CancerDormancy_picture](https://user-images.githubusercontent.com/51481454/141082122-c3711ca2-1c96-4853-bb46-589356403996.png)
 
-#Table of contents
+## Table of contents
 
-##BRCA_Quiescence
+## Table of contents
 
-##CEP89_QuiescenceAssociation
+## Table of contents
 
-##Data
+## Table of contents
 
-##PanCancer_ElasticNetRegression
+## Table of contents
 
-##Prognosis_and_treatment_response_analysis
+## Table of contents
 
-##QuiescenceBiomarkerGeneIdentification
+## Table of contents
 
-##QuiescenceScoreValidation
+## Table of contents
 
-##QuiescenceTypeClassification
+## Table of contents
 
-##TCGA_DataDownload_and_Processing
+## Table of contents
 
-##TCGA_DormancyEvaluation
+## Table of contents
 
 
