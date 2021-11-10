@@ -4,7 +4,7 @@ This repository contains code for the evaluation of cellular dormancy/quiescence
 
 ![CancerDormancy_picture](https://user-images.githubusercontent.com/51481454/141082122-c3711ca2-1c96-4853-bb46-589356403996.png)
 
-## Table of contents
+# Table of contents
 
 ## Table of contents
 
