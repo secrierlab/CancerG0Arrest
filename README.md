@@ -39,7 +39,7 @@ This folder contains the code which explores the impact of cellular dormancy on 
 
 ## QuiescenceBiomarkerGeneIdentification
 
-This folder contains code which identifies a list of generic quiescence biomarker genes, as well as genes specificially descriptive of 5 individual quiescence types, based on data published by Min and Spencer, 2019, PLoS Biol.
+This folder contains code **(QuiescenceBiomarker_Identification.R)** which identifies a list of generic quiescence biomarker genes, as well as genes specificially descriptive of 5 individual quiescence types, based on data published by Min and Spencer, 2019, PLoS Biol.
 
 ## QuiescenceScoreValidation
 
