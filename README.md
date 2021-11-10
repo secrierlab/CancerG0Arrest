@@ -29,6 +29,14 @@ This folder contains the code for running the pan-cancer elastic net regression 
 
 This folder contains the code which explores the impact of cellular dormancy on patient prognosis as well as treatment response in scRNA-seq datasets.
 
+- **BulkRNAseqDatasets_PalbociclibTreatmentResponse.R:** performs the comparison of quiescene programme estimates in cancer cell lines before and after Palbociclib treatment 
+- **BulkRNAseqDatasets_TreatmentResponse.R:** performs the comparison of quiescence levels in bulkRNA-seq cancer cell line datasets in response to Palbociclib, 5-FU and BRAF inhibition.
+- **GSE134839_treatment_response.R:** shows changes in quiescence estimates within PC9 NSCLC cells in response to EGFR inhibition.
+- **GSE149224_treatment_response.R:** shows changes in quiescence estimates within TP53 WT and TP53 MT colorectal cancer cells in response to 5-FU treatment.
+- **TCGA_CoxProportionalHazardsModel_CommonQS.R:** runs a Cox proportional hazards model to determine the effect of quiescence on disease specific survival while accounting for cancer type, tumour stage, mutational rate, as well as patient age and sex.
+- **TCGA_CoxProportionalHazardsModel_IndividualCancerTypes.R:** runs a Cox proportional hazards model to determine the effect of quiescence on disease specific survival within specific cancer types while accounting for tumour stage.
+- **TCGA_CoxProportionalHazardsModel_IndividualQuiescenceTypes.R:** runs a Cox proportional hazards model to determine the effect of different quiescence types on disease specific survival while accounting for cancer type, tumour stage, mutational rate, as well as patient age and sex.
+
 ## QuiescenceBiomarkerGeneIdentification
 
 This folder contains code which identifies a list of generic quiescence biomarker genes, as well as genes specificially descriptive of 5 individual quiescence types, based on data published by Min and Spencer, 2019, PLoS Biol.
