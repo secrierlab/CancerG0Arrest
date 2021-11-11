@@ -66,6 +66,11 @@ This folder contains code used to estimate the dominant form of quiescence acros
 
 This folder contains code used to download and process TCGA expression, copy-number variation and mutational data.
 
+- **TCGA_combining_CNV_data.R:** combines CNV data from individual TCGA studies.
+- **TCGA_Combining_FPKM_ExpressionData.R:** combines FPKM normalised expression data from individual TCGA studies.
+- **TCGA_Expression_CNV_DataDownload.R:** downloads expression and CNV TCGA data for all solid tissue cancer samples from TCGABiolinks.
+- **TCGA_ExpressionData_PurityScaling.R:** scales TCGA FPKM normalised expression data accoridng to tumour sample purity.
+
 ## TCGA_DormancyEvaluation
 
 This folder contains code used to profile quiescence levels of solid cancer, primary tumour samples, across the TCGA cohort. 
