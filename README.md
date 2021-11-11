@@ -17,9 +17,9 @@ This folder contains the code which explores the association between breast canc
 
 This folder cotains code which explores the impact of CEP89 activity on quiescence-proliferation decisions.
 
-- **TCGA_CEP89_status_vs_CA20.R:** shows the association between CEP89 amplification status and CA20 scores (refelctive of centromere amplification).
+- **TCGA_CEP89_status_vs_CA20.R:** shows the association between CEP89 amplification status and CA20 scores (refelctive of centromere amplification) using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
 - **TCGA_CoxProportionalHazardsModelCEP89_stratification.R:** calculates Cox proportional hazards analysis estimates for the impact of CEP89 expression on patient prognosis within individual cancer studies.
-- **TCGA_QuiescenceScore_vs_CA20.R:** shows the pan-cancer relationship between CA20 scores (refelctive of centromere amplification) and tumour quiescence across the TCGA cohort.
+- **TCGA_QuiescenceScore_vs_CA20.R:** shows the pan-cancer relationship between CA20 scores (refelctive of centromere amplification) and tumour quiescence across the TCGA cohort, using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
 
 ## PanCancer_ElasticNetRegression
 
@@ -46,7 +46,7 @@ This folder contains code **(QuiescenceBiomarker_Identification.R)** which ident
 This folder contains code used to validate the combined z-score quiescence scoring metholody used to asssess the presence of a generic quiescence state as well as 5 specific quiescence types.
 - **QuiescenceScoreValidation_ROC.R:** illustrates the performance of the combined z-score quiescence scoring methodology on separating actively proliferating and quiescent cells
 - **QS_vs_ProliferationMarkers_Performance.R:** Compares the performance of the combined z-score quiescence scoring methodology on separating actvely proliferating and quiescent cells, compared to other markers of proliferating cells.
-- **QuiescenceScore_vs_QuiescenceDepth.R:** Shows quiescence levels estimates of rat embryonic fibroblast cells under serum starvation for various amounts of time.
+- **QuiescenceScore_vs_QuiescenceDepth.R:** Shows quiescence levels estimates of rat embryonic fibroblast cells under serum starvation for various amounts of time, using data from Fujimaki et al 2019, Proc Natl Acad Sci USA
 - **CDK4_6_Inhibition_QS_Validation.R, Contact_Inhibition_QS_Validation.R, MEK_Inhibition_QS_Validation.R, SerumStarvation_QS_Validation.R, Spontaneous_QS_Validation.R"** show the correlation between quiescence score estimates for the specific quiescence programmes and the expression of genes associated with the corresponding form of quiescence in the literature.
 
 ## QuiescenceTypeClassification
@@ -63,3 +63,14 @@ This folder contains code used to download and process TCGA expression, copy-num
 ## TCGA_DormancyEvaluation
 
 This folder contains code used to profile quiescence levels of solid cancer, primary tumour samples, across the TCGA cohort. 
+
+- **TCGA_QS_vs_SenescenceMarkers.R:** investigates the relationship between quiescence and senescnece in cancer
+- **TCGA_QS_vs_StemnessExpressionIndicies.R:** investigates the relationship between quiescence and stem cell marker expression in cancer using data Malta et al 2018, Cell
+- **TCGA_QS_vs_TelomeraseActivity.R:** investigates the relationship between quiescence and telomerase activation in cancer using data from Noureen et al 2021, Nature Communications
+- **TCGA_CDKN1A_expression_QS.R**: shows the association between quiescence levels and CDKN1A (encoding p21) expression in cancer
+- **TCGA_Kmeans_QuiescenceGenes.R:** clusters TCGA samples into high quiescence and low quiescence groups, after the removal of tissue specific expression patterns
+- **TCGA_PHATE_with_TissueTypeComBatCorrection.R:"** performs PHATE dimentionality reduction on TCGA samples based on the expression of quiescence biomarker genes, following the removal of tissue specific expression patterns.
+- **TCGA_QS_vs_WGD.R** shows the association between quiescence levels of whole-genome duplication events in cancer
+- **TCGA_QS_correlation_with_ProliferationMarkers.R:** shows the association between quiescence scores and the expression of previously reported markers of proliferating cells 
+- **TCGA_PHATE_without_TissueTypeComBatCorrection.R:** performs PHATE dimentionality reduction on TCGA samples based on the expression of quiescence biomarker genes, without the removal of tissue specific expression patterns.
+- **AvStemCellDivision_vs_meanTCGA_QS.R:** shows the correlation between mean quiescence scores across TCGA cancer types and reported stem cell division estimates for the corresponding tissues, using data from Tomasetti and Vogelstein, 2015, Science
