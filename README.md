@@ -44,6 +44,10 @@ This folder contains code **(QuiescenceBiomarker_Identification.R)** which ident
 ## QuiescenceScoreValidation
 
 This folder contains code used to validate the combined z-score quiescence scoring metholody used to asssess the presence of a generic quiescence state as well as 5 specific quiescence types.
+- **QuiescenceScoreValidation_ROC.R:** illustrates the performance of the combined z-score quiescence scoring methodology on separating actively proliferating and quiescent cells
+- **QS_vs_ProliferationMarkers_Performance.R:** Compares the performance of the combined z-score quiescence scoring methodology on separating actvely proliferating and quiescent cells, compared to other markers of proliferating cells.
+- **QuiescenceScore_vs_QuiescenceDepth.R:** Shows quiescence levels estimates of rat embryonic fibroblast cells under serum starvation for various amounts of time.
+- **CDK4_6_Inhibition_QS_Validation.R, Contact_Inhibition_QS_Validation.R, MEK_Inhibition_QS_Validation.R, SerumStarvation_QS_Validation.R, Spontaneous_QS_Validation.R"** show the correlation between quiescence score estimates for the specific quiescence programmes and the expression of genes associated with the corresponding form of quiescence in the literature.
 
 ## QuiescenceTypeClassification
 
