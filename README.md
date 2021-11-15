@@ -28,6 +28,8 @@ This folder contains the code for running the pan-cancer elastic net regression 
 - **FishersExactTest_DDRmutation_vs_quiescence.R:** shows the depletion of mutations across the DNA damage repair pathways in TCGA samples with high levels of quiescence
 - **MCF7_PTEN_mutation_vs_DoublingTime.R:** shows the association between quiescence scores, doubling time and PTEN mutational status in MCF7 cell line stains using data from Ben-David et al 2018, Nature
 - **Quiescence_MSI_association.R:** shows the association between quiescence and microsatelite instability using data from Cortes-Ciriano et al 2017, Nature Communications
+- **PanCancer_ElasticNetRegression.R:** runs 1000 iterations of the pan-cancer elastic net regression model to identuft genomic events significantly associated with dormancy.
+- **PanCancerModel_InternalValidation_and_SHAP.R:** shows the correlation between predicted and observed quiescence scores in the interal TCGA validation cohort. It also illustrates the importance of individual features using a SHAP plots.
 
 ## Prognosis_and_treatment_response_analysis
 
@@ -63,6 +65,11 @@ This folder contains code used to estimate the dominant form of quiescence acros
 ## TCGA_DataDownload_and_Processing
 
 This folder contains code used to download and process TCGA expression, copy-number variation and mutational data.
+
+- **TCGA_combining_CNV_data.R:** combines CNV data from individual TCGA studies.
+- **TCGA_Combining_FPKM_ExpressionData.R:** combines FPKM normalised expression data from individual TCGA studies.
+- **TCGA_Expression_CNV_DataDownload.R:** downloads expression and CNV TCGA data for all solid tissue cancer samples from TCGABiolinks.
+- **TCGA_ExpressionData_PurityScaling.R:** scales TCGA FPKM normalised expression data accoridng to tumour sample purity.
 
 ## TCGA_DormancyEvaluation
 
