@@ -324,3 +324,254 @@ p <- ggboxplot(QS, x = "quiescence_group", y = "mean_apoptosis_expr",
 pdf("GSE134839_ApoptosisExpr_prolif_vs_quiescent.pdf",height = 10, width = 10)
 p + stat_compare_means(label = "p.format")
 dev.off()
+
+
+
+
+
+
+
+##############################################
+#Repeat analysis with a reduced gene signature
+#############################################
+
+
+#Load quiescence biomarker genes:
+setwd("~/Documents/GitHub/CancerDormancy/Data/DormancyGeneList")
+load("upregulated_common.RData")
+load("downregulated_common.RData")
+load("RefinedGenePanel_35.RData")
+upregulated_common <- upregulated_common[upregulated_common %in% GenePanel35]
+downregulated_common <- downregulated_common[downregulated_common %in% GenePanel35]
+quiescence_genes <- c(downregulated_common, upregulated_common)
+expr.data <- expr.data[rownames(expr.data) %in% quiescence_genes,]
+gene_lists <- list(upregulated_common, downregulated_common)
+expr.data <- as.matrix(expr.data)
+es.dif <- gsva(expr.data, gene_lists, method = "zscore", verbose = FALSE, parallel.sz=1)
+es.dif <- t(es.dif)
+es.dif <- data.frame(es.dif)
+es.dif$Common_score <- es.dif$X1 - es.dif$X2
+QS <- es.dif
+QS$X1 <- NULL
+QS$X2 <- NULL
+QS$SampleID <- rownames(QS)
+QS$Day <- sapply(QS$SampleID, function(x)
+  strsplit(x,"_")[[1]][1])
+table(QS$Day)
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Results/")
+save(QS, file = "GSE134839_QuiescenceScores_35GeneRefinedPanel.RData")
+
+
+###########################################
+####UMAP analysis 
+###########################################
+
+expr.data <- data.frame(expr.data)
+
+######
+#DAY0
+######
+D0_samples <- QS[QS$Day %in% "D0",]
+D0_samples <- as.character(D0_samples$SampleID)
+umap.expr <- expr.data[,colnames(expr.data) %in% D0_samples]
+umap.expr <- as.matrix(t(umap.expr))
+common.umap = umap(umap.expr, random_state=123)
+common.umap$layout 
+UMAP_coordinates <- data.frame(common.umap$layout)
+colnames(UMAP_coordinates) <- c("UMAP1","UMAP2")
+UMAP_coordinates$Sample <- rownames(UMAP_coordinates)
+UMAP_coordinates_D0 <- merge(UMAP_coordinates, QS,
+                             by.x = "Sample", by.y = "SampleID")
+
+######
+#DAY1
+#####
+D1_samples <- QS[QS$Day %in% "D1",]
+D1_samples <- as.character(D1_samples$SampleID)
+umap.expr <- expr.data[,colnames(expr.data) %in% D1_samples]
+umap.expr <- as.matrix(t(umap.expr))
+common.umap = umap(umap.expr, random_state=123)
+common.umap$layout 
+UMAP_coordinates <- data.frame(common.umap$layout)
+colnames(UMAP_coordinates) <- c("UMAP1","UMAP2")
+UMAP_coordinates$Sample <- rownames(UMAP_coordinates)
+UMAP_coordinates_D1 <- merge(UMAP_coordinates, QS,
+                             by.x = "Sample", by.y = "SampleID")
+
+######
+#DAY2
+######
+D2_samples <- QS[QS$Day %in% "D2",]
+D2_samples <- as.character(D2_samples$SampleID)
+umap.expr <- expr.data[,colnames(expr.data) %in% D2_samples]
+umap.expr <- as.matrix(t(umap.expr))
+common.umap = umap(umap.expr, random_state=123)
+common.umap$layout 
+UMAP_coordinates <- data.frame(common.umap$layout)
+colnames(UMAP_coordinates) <- c("UMAP1","UMAP2")
+UMAP_coordinates$Sample <- rownames(UMAP_coordinates)
+UMAP_coordinates_D2 <- merge(UMAP_coordinates, QS,
+                             by.x = "Sample", by.y = "SampleID")
+
+######
+#DAY4
+######
+D4_samples <- QS[QS$Day %in% "D4",]
+D4_samples <- as.character(D4_samples$SampleID)
+umap.expr <- expr.data[,colnames(expr.data) %in% D4_samples]
+umap.expr <- as.matrix(t(umap.expr))
+common.umap = umap(umap.expr, random_state=123)
+common.umap$layout 
+UMAP_coordinates <- data.frame(common.umap$layout)
+colnames(UMAP_coordinates) <- c("UMAP1","UMAP2")
+UMAP_coordinates$Sample <- rownames(UMAP_coordinates)
+UMAP_coordinates_D4 <- merge(UMAP_coordinates, QS,
+                             by.x = "Sample", by.y = "SampleID")
+
+######
+#DAY9
+######
+D9_samples <- QS[QS$Day %in% "D9",]
+D9_samples <- as.character(D9_samples$SampleID)
+umap.expr <- expr.data[,colnames(expr.data) %in% D9_samples]
+umap.expr <- as.matrix(t(umap.expr))
+common.umap = umap(umap.expr, random_state=123)
+common.umap$layout 
+UMAP_coordinates <- data.frame(common.umap$layout)
+colnames(UMAP_coordinates) <- c("UMAP1","UMAP2")
+UMAP_coordinates$Sample <- rownames(UMAP_coordinates)
+UMAP_coordinates_D9 <- merge(UMAP_coordinates, QS,
+                             by.x = "Sample", by.y = "SampleID")
+
+######
+#DAY11
+######
+D11_samples <- QS[QS$Day %in% "D11",]
+D11_samples <- as.character(D11_samples$SampleID)
+umap.expr <- expr.data[,colnames(expr.data) %in% D11_samples]
+umap.expr <- as.matrix(t(umap.expr))
+common.umap = umap(umap.expr, random_state=123)
+common.umap$layout 
+UMAP_coordinates <- data.frame(common.umap$layout)
+colnames(UMAP_coordinates) <- c("UMAP1","UMAP2")
+UMAP_coordinates$Sample <- rownames(UMAP_coordinates)
+UMAP_coordinates_D11 <- merge(UMAP_coordinates, QS,
+                              by.x = "Sample", by.y = "SampleID")
+
+######Plot combined UMAP coordinates:
+UMAP_coordinates <- rbind(UMAP_coordinates_D0, UMAP_coordinates_D1, UMAP_coordinates_D2,UMAP_coordinates_D4, UMAP_coordinates_D9, UMAP_coordinates_D11)
+UMAP_coordinates$Day <- factor(UMAP_coordinates$Day, levels = c("D0","D1","D2","D4","D9","D11"))
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Figures")
+pdf("GSE134839_UMAP_35GeneRefinedPanel.pdf", height = 3, width = 9)
+ggplot(UMAP_coordinates, aes(x=UMAP1, y=UMAP2, colour = Common_score)) +
+  geom_point() +
+  scale_color_gradient2(low = "#59ac53", midpoint = 0,mid = "grey95", high = "#8b5aa8") + theme_classic() + facet_wrap(~Day,nrow = 1)
+dev.off()
+
+
+
+
+
+#################################################
+#Percentage of quiescent cells at each timepoint
+#################################################
+QS$CellStatus <- sapply(QS$Common_score, function(x)
+  ifelse(x < 0, "Proliferating","Quiescent"))
+table(QS$Day)
+Days <- c(0,0,1,1,2,2,4,4,9,9,11,11)
+CellStatus <- c("Proliferating","Quiescent","Proliferating","Quiescent","Proliferating","Quiescent","Proliferating","Quiescent","Proliferating","Quiescent","Proliferating","Quiescent")
+N <- NULL
+for (i in c("D0","D1","D2","D4","D9","D11")) {
+  
+  print(i)
+  test <- QS[QS$Day %in% i,]
+  test <- table(test$CellStatus)
+  n <- test[1]
+  N <- c(N,n)
+  n <- test[2]
+  N <- c(N,n)
+  
+}
+Summary <- data.frame(Days, CellStatus, N)
+Summary$Days <- factor(Summary$Days, levels = c(0,1,2,4,9,11))
+pdf("GSE134839_barplot_cell_composition_35GeneRefinedPanel.pdf", height = 5, width = 4)
+p <- ggplot(Summary, aes(fill=CellStatus, y=N, x=Days, width = 0.75)) + 
+  geom_bar(stat = "identity", position = "fill") + theme_classic()
+p + rotate_x_text(45) + scale_fill_manual(values = c("#666666", "#D95F02"))
+dev.off()
+
+
+
+
+
+
+#####################################################
+#Plot percentage of detected cells at each timepoint
+####################################################
+
+#Load annotation
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Results/")
+load("GSE134839_QuiescenceScores.RData")
+QS$Day <- sapply(QS$SampleID, function(x)
+  strsplit(x,"_")[[1]][1])
+table(QS$Day)
+QS$Day <- factor(QS$Day, levels = c("D0","D1","D2","D4","D9","D11"))
+Day <- c(0,1,2,4,9,11)
+Day <- factor(Day, levels = c(0,1,2,4,9,11))
+Number_of_cells <- c(1572,309,253,226,200,389)
+Data <- data.frame(Day, Number_of_cells)
+# Plot
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Figures/")
+pdf("GSE134839_CellNumber_vs_Time.pdf",height = 5,width = 5)
+ggplot(data=Data, aes(x=Day, y=Number_of_cells, group=1)) +
+  geom_line()+
+  geom_point() + theme_classic()
+dev.off()
+
+
+
+
+
+
+
+
+#####################################################
+#Plot apoptosis gene expression across the timecourse
+####################################################
+
+#Load apoptosis genes:
+setwd("~/Documents/GitHub/CancerDormancy/Data/OtherGeneLists/")
+apoptosis.genes <- read.table("Apoptosis_hallmarks.txt", header = FALSE,sep = "\t")
+apoptosis.genes <- as.character(apoptosis.genes$V1)
+expr.apoptosis <- expr.data[rownames(expr.data) %in% apoptosis.genes,]
+expr.apoptosis <- data.frame(expr.apoptosis)
+#Load annotation:
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Results/")
+load("GSE134839_QuiescenceScores.RData")
+QS$mean_apoptosis_expr <- colMeans(expr.data)
+QS$Day <- sapply(QS$SampleID, function(x)
+  strsplit(x,"_")[[1]][1])
+table(QS$Day)
+QS$Day <- factor(QS$Day, levels = c("D0","D1","D2","D4","D9","D11"))
+#PLOT:
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Figures/")
+QS$quiescence_group <- sapply(QS$Common_score, function(x)
+  ifelse(x > 0, "Quiescent","Proliferating"))
+my_comparisons <- list( c("Quiescent","Proliferating"))
+p <- ggboxplot(QS, x = "quiescence_group", y = "mean_apoptosis_expr",
+               color = "quiescence_group", palette = "jco",
+               facet.by = "Day", short.panel.labs = FALSE)
+# Use only p.format as label. Remove method name.
+pdf("GSE134839_ApoptosisExpr_prolif_vs_quiescent.pdf",height = 10, width = 10)
+p + stat_compare_means(label = "p.format")
+dev.off()
+
+
+
+
+
+
+
+
+
+

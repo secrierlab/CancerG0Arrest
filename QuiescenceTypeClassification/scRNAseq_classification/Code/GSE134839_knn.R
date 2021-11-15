@@ -616,3 +616,422 @@ p <- ggplot(Summary, aes(fill=QuiescenceType, y=N, x=Days, width = 0.75)) +
 p + rotate_x_text(45) + scale_colour_manual(values = c("cdk" = "firebrick3", "contact" = "royalblue4", "mek" = "lightskyblue", "serum" = "goldenrod1", "spontaneous" = "mediumorchid4","uncertain" = "grey81"))
 
 dev.off()
+
+
+
+
+
+
+
+
+
+
+
+
+
+######################################################
+#Repeat analysis with 35-gene list reduced signature
+######################################################
+
+
+
+
+##############################################
+#Principal component analysis
+###############################################
+####Do this on a day by day basis
+
+#Select reference cells and cells from day 0 of the experiment
+Samples <- colnames(combat_filter)
+Selected_cells <- Samples[1:27]
+Samples <- data.frame(Samples)
+Samples$Day <- sapply(Samples$Samples, function(x)
+  strsplit(x,"_")[[1]][1])
+Samples <- Samples[Samples$Day %in% "D0",]
+Samples <- as.character(Samples$Samples)
+Selected_cells <- c(Selected_cells, Samples)
+combat_filter_test <- combat_filter[,colnames(combat_filter) %in% Selected_cells]
+irlba_res <- prcomp(t(combat_filter_test[,-1]))
+pca.coordinates <- irlba_res$x
+rownames(pca.coordinates)
+##Add annotation about quiescence type:
+QuiescenceType <- c("spontaneous","spontaneous","control","spontaneous","spontaneous","control","control","spontaneous",
+                    "control","control","spontaneous","spontaneous","spontaneous","spontaneous","spontaneous",
+                    "control","control","control","control","control","control","control","serum","serum",
+                    "mek","mek","cdk","cdk","contact","contact","control","control","serum","serum","mek","mek",
+                    "cdk","cdk","contact","contact")
+QuiescenceType <- QuiescenceType[!(QuiescenceType %in% "control")]
+dim(pca.coordinates)
+QuiescenceType <- c(QuiescenceType, rep("single cell",1572))
+pca.coordinates <- data.frame(pca.coordinates)
+pca.coordinates$QuiescenceType <- QuiescenceType
+pca.coordinates_D0 <- pca.coordinates
+
+
+##Select reference cells and cells from day 0 of the experiment
+Samples <- colnames(combat_filter)
+Selected_cells <- Samples[1:27]
+Samples <- data.frame(Samples)
+Samples$Day <- sapply(Samples$Samples, function(x)
+  strsplit(x,"_")[[1]][1])
+Samples <- Samples[Samples$Day %in% "D1",]
+Samples <- as.character(Samples$Samples)
+Selected_cells <- c(Selected_cells, Samples)
+combat_filter_test <- combat_filter[,colnames(combat_filter) %in% Selected_cells]
+irlba_res <- prcomp(t(combat_filter_test[,-1]))
+pca.coordinates <- irlba_res$x
+rownames(pca.coordinates)
+##Add annotation about quiescence type:
+QuiescenceType <- c("spontaneous","spontaneous","control","spontaneous","spontaneous","control","control","spontaneous",
+                    "control","control","spontaneous","spontaneous","spontaneous","spontaneous","spontaneous",
+                    "control","control","control","control","control","control","control","serum","serum",
+                    "mek","mek","cdk","cdk","contact","contact","control","control","serum","serum","mek","mek",
+                    "cdk","cdk","contact","contact")
+QuiescenceType <- QuiescenceType[!(QuiescenceType %in% "control")]
+dim(pca.coordinates)
+QuiescenceType <- c(QuiescenceType, rep("single cell",309))
+pca.coordinates <- data.frame(pca.coordinates)
+pca.coordinates$QuiescenceType <- QuiescenceType
+pca.coordinates_D1 <- pca.coordinates
+
+
+##Select reference cells and cells from day 2 of the experiment
+Samples <- colnames(combat_filter)
+Selected_cells <- Samples[1:27]
+Samples <- data.frame(Samples)
+Samples$Day <- sapply(Samples$Samples, function(x)
+  strsplit(x,"_")[[1]][1])
+Samples <- Samples[Samples$Day %in% "D2",]
+Samples <- as.character(Samples$Samples)
+Selected_cells <- c(Selected_cells, Samples)
+combat_filter_test <- combat_filter[,colnames(combat_filter) %in% Selected_cells]
+irlba_res <- prcomp(t(combat_filter_test[,-1]))
+pca.coordinates <- irlba_res$x
+rownames(pca.coordinates)
+##Add annotation about quiescence type:
+QuiescenceType <- c("spontaneous","spontaneous","control","spontaneous","spontaneous","control","control","spontaneous",
+                    "control","control","spontaneous","spontaneous","spontaneous","spontaneous","spontaneous",
+                    "control","control","control","control","control","control","control","serum","serum",
+                    "mek","mek","cdk","cdk","contact","contact","control","control","serum","serum","mek","mek",
+                    "cdk","cdk","contact","contact")
+QuiescenceType <- QuiescenceType[!(QuiescenceType %in% "control")]
+dim(pca.coordinates)
+QuiescenceType <- c(QuiescenceType, rep("single cell",226))
+pca.coordinates <- data.frame(pca.coordinates)
+pca.coordinates$QuiescenceType <- QuiescenceType
+pca.coordinates_D2 <- pca.coordinates
+
+
+##Select reference cells and cells from day 4 of the experiment:
+Samples <- colnames(combat_filter)
+Selected_cells <- Samples[1:27]
+Samples <- data.frame(Samples)
+Samples$Day <- sapply(Samples$Samples, function(x)
+  strsplit(x,"_")[[1]][1])
+Samples <- Samples[Samples$Day %in% "D4",]
+Samples <- as.character(Samples$Samples)
+Selected_cells <- c(Selected_cells, Samples)
+combat_filter_test <- combat_filter[,colnames(combat_filter) %in% Selected_cells]
+irlba_res <- prcomp(t(combat_filter_test[,-1]))
+pca.coordinates <- irlba_res$x
+rownames(pca.coordinates)
+##Add annotation about quiescence type:
+QuiescenceType <- c("spontaneous","spontaneous","control","spontaneous","spontaneous","control","control","spontaneous",
+                    "control","control","spontaneous","spontaneous","spontaneous","spontaneous","spontaneous",
+                    "control","control","control","control","control","control","control","serum","serum",
+                    "mek","mek","cdk","cdk","contact","contact","control","control","serum","serum","mek","mek",
+                    "cdk","cdk","contact","contact")
+QuiescenceType <- QuiescenceType[!(QuiescenceType %in% "control")]
+dim(pca.coordinates)
+QuiescenceType <- c(QuiescenceType, rep("single cell",200))
+pca.coordinates <- data.frame(pca.coordinates)
+pca.coordinates$QuiescenceType <- QuiescenceType
+pca.coordinates_D4 <- pca.coordinates
+
+
+##Select reference cells and cells from day 9 of the experiment
+Samples <- colnames(combat_filter)
+Selected_cells <- Samples[1:27]
+Samples <- data.frame(Samples)
+Samples$Day <- sapply(Samples$Samples, function(x)
+  strsplit(x,"_")[[1]][1])
+Samples <- Samples[Samples$Day %in% "D9",]
+Samples <- as.character(Samples$Samples)
+Selected_cells <- c(Selected_cells, Samples)
+combat_filter_test <- combat_filter[,colnames(combat_filter) %in% Selected_cells]
+irlba_res <- prcomp(t(combat_filter_test[,-1]))
+pca.coordinates <- irlba_res$x
+rownames(pca.coordinates)
+##Add annotation about quiescence type:
+QuiescenceType <- c("spontaneous","spontaneous","control","spontaneous","spontaneous","control","control","spontaneous",
+                    "control","control","spontaneous","spontaneous","spontaneous","spontaneous","spontaneous",
+                    "control","control","control","control","control","control","control","serum","serum",
+                    "mek","mek","cdk","cdk","contact","contact","control","control","serum","serum","mek","mek",
+                    "cdk","cdk","contact","contact")
+QuiescenceType <- QuiescenceType[!(QuiescenceType %in% "control")]
+dim(pca.coordinates)
+QuiescenceType <- c(QuiescenceType, rep("single cell",389))
+pca.coordinates <- data.frame(pca.coordinates)
+pca.coordinates$QuiescenceType <- QuiescenceType
+pca.coordinates_D9 <- pca.coordinates
+
+
+##Select reference cells and cells from day 11 of the experiment
+Samples <- colnames(combat_filter)
+Selected_cells <- Samples[1:27]
+Samples <- data.frame(Samples)
+Samples$Day <- sapply(Samples$Samples, function(x)
+  strsplit(x,"_")[[1]][1])
+Samples <- Samples[Samples$Day %in% "D11",]
+Samples <- as.character(Samples$Samples)
+Selected_cells <- c(Selected_cells, Samples)
+combat_filter_test <- combat_filter[,colnames(combat_filter) %in% Selected_cells]
+irlba_res <- prcomp(t(combat_filter_test[,-1]))
+pca.coordinates <- irlba_res$x
+rownames(pca.coordinates)
+##Add annotation about quiescence type:
+QuiescenceType <- c("spontaneous","spontaneous","control","spontaneous","spontaneous","control","control","spontaneous",
+                    "control","control","spontaneous","spontaneous","spontaneous","spontaneous","spontaneous",
+                    "control","control","control","control","control","control","control","serum","serum",
+                    "mek","mek","cdk","cdk","contact","contact","control","control","serum","serum","mek","mek",
+                    "cdk","cdk","contact","contact")
+QuiescenceType <- QuiescenceType[!(QuiescenceType %in% "control")]
+dim(pca.coordinates)
+QuiescenceType <- c(QuiescenceType, rep("single cell",253))
+pca.coordinates <- data.frame(pca.coordinates)
+pca.coordinates$QuiescenceType <- QuiescenceType
+pca.coordinates_D11 <- pca.coordinates
+
+
+##########################################################################
+###Add quiescence score annotation:
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Results/")
+load("GSE134839_QuiescenceScores_35GeneRefinedPanel.RData")
+#Select quiescent cells:
+QS <- QS[QS$Common_score > 0,]
+quiescent_cells <- as.character(QS$SampleID)
+
+#D0
+pca.coordinates_D0 <- pca.coordinates_D0[,colnames(pca.coordinates_D0) %in% c("QuiescenceType","PC1","PC2")]
+pca_train <- pca.coordinates_D0[1:26,]
+pca_train_category <- pca_train$QuiescenceType
+pca_train$QuiescenceType <- NULL
+dim(pca.coordinates_D0)
+pca_test <- pca.coordinates_D0[27:1598,]
+pca.proliferating <- pca_test[!rownames(pca_test) %in% quiescent_cells,]
+pca.proliferating$QuiescenceType <- "Proliferating"
+pca_test <- pca_test[rownames(pca_test) %in% quiescent_cells,]
+pca_test$QuiescenceType <- NULL
+pr <- knn(pca_train,pca_test,cl=pca_train_category,k=3, l = 2)
+results_D0 <- pca_test
+results_D0$QuiescenceType <- pr
+results_D0$QuiescenceType <- as.character(results_D0$QuiescenceType)
+table(results_D0$QuiescenceType)
+results_D0$QuiescenceType <- sapply(results_D0$QuiescenceType, function(x)
+  ifelse(x %in% "spontaneous","spontaneous",
+         ifelse(x %in% "serum","serum",
+                ifelse(x %in% "contact","contact",
+                       ifelse(x %in% "cdk","cdk",
+                              ifelse(x %in% "mek","mek","uncertain"))))))
+pca_train$QuiescenceType <- pca_train_category
+results_D0 <- rbind(pca_train, results_D0, pca.proliferating)
+table(results_D0$QuiescenceType)
+
+
+
+
+#D1
+pca.coordinates_D1 <- pca.coordinates_D1[,colnames(pca.coordinates_D1) %in% c("QuiescenceType","PC1","PC2")]
+pca_train <- pca.coordinates_D1[1:26,]
+pca_train_category <- pca_train$QuiescenceType
+pca_train$QuiescenceType <- NULL
+dim(pca.coordinates_D1)
+pca_test <- pca.coordinates_D1[27:335,]
+pca.proliferating <- pca_test[!rownames(pca_test) %in% quiescent_cells,]
+pca.proliferating$QuiescenceType <- "Proliferating"
+pca_test <- pca_test[rownames(pca_test) %in% quiescent_cells,]
+pca_test$QuiescenceType <- NULL
+pr <- knn(pca_train,pca_test,cl=pca_train_category,k=3, l = 2)
+results_D1 <- pca_test
+results_D1$QuiescenceType <- pr
+results_D1$QuiescenceType <- as.character(results_D1$QuiescenceType)
+table(results_D1$QuiescenceType)
+results_D1$QuiescenceType <- sapply(results_D1$QuiescenceType, function(x)
+  ifelse(x %in% "spontaneous","spontaneous",
+         ifelse(x %in% "serum","serum",
+                ifelse(x %in% "contact","contact",
+                       ifelse(x %in% "cdk","cdk",
+                              ifelse(x %in% "mek","mek","uncertain"))))))
+pca_train$QuiescenceType <- pca_train_category
+results_D1 <- rbind(pca_train, results_D1, pca.proliferating)
+table(results_D1$QuiescenceType)
+
+
+
+#D2
+pca.coordinates_D2 <- pca.coordinates_D2[,colnames(pca.coordinates_D2) %in% c("QuiescenceType","PC1","PC2")]
+pca_train <- pca.coordinates_D2[1:26,]
+pca_train_category <- pca_train$QuiescenceType
+pca_train$QuiescenceType <- NULL
+dim(pca.coordinates_D2)
+pca_test <- pca.coordinates_D2[27:252,]
+pca.proliferating <- pca_test[!rownames(pca_test) %in% quiescent_cells,]
+pca.proliferating$QuiescenceType <- "Proliferating"
+pca_test <- pca_test[rownames(pca_test) %in% quiescent_cells,]
+pca_test$QuiescenceType <- NULL
+pr <- knn(pca_train,pca_test,cl=pca_train_category,k=3, l = 2)
+results_D2 <- pca_test
+results_D2$QuiescenceType <- pr
+results_D2$QuiescenceType <- as.character(results_D2$QuiescenceType)
+table(results_D2$QuiescenceType)
+results_D2$QuiescenceType <- sapply(results_D2$QuiescenceType, function(x)
+  ifelse(x %in% "spontaneous","spontaneous",
+         ifelse(x %in% "serum","serum",
+                ifelse(x %in% "contact","contact",
+                       ifelse(x %in% "cdk","cdk",
+                              ifelse(x %in% "mek","mek","uncertain"))))))
+pca_train$QuiescenceType <- pca_train_category
+results_D2 <- rbind(pca_train, results_D2, pca.proliferating)
+table(results_D2$QuiescenceType)
+
+
+
+
+#D4
+pca.coordinates_D4 <- pca.coordinates_D4[,colnames(pca.coordinates_D4) %in% c("QuiescenceType","PC1","PC2")]
+pca_train <- pca.coordinates_D4[1:26,]
+pca_train_category <- pca_train$QuiescenceType
+pca_train$QuiescenceType <- NULL
+dim(pca.coordinates_D4)
+pca_test <- pca.coordinates_D4[27:226,]
+pca.proliferating <- pca_test[!rownames(pca_test) %in% quiescent_cells,]
+pca.proliferating$QuiescenceType <- "Proliferating"
+pca_test <- pca_test[rownames(pca_test) %in% quiescent_cells,]
+pca_test$QuiescenceType <- NULL
+pr <- knn(pca_train,pca_test,cl=pca_train_category,k=3, l = 2)
+results_D4 <- pca_test
+results_D4$QuiescenceType <- pr
+results_D4$QuiescenceType <- as.character(results_D4$QuiescenceType)
+table(results_D4$QuiescenceType)
+results_D4$QuiescenceType <- sapply(results_D4$QuiescenceType, function(x)
+  ifelse(x %in% "spontaneous","spontaneous",
+         ifelse(x %in% "serum","serum",
+                ifelse(x %in% "contact","contact",
+                       ifelse(x %in% "cdk","cdk",
+                              ifelse(x %in% "mek","mek","uncertain"))))))
+pca_train$QuiescenceType <- pca_train_category
+results_D4 <- rbind(pca_train, results_D4, pca.proliferating)
+table(results_D4$QuiescenceType)
+
+
+
+#D9
+pca.coordinates_D9 <- pca.coordinates_D9[,colnames(pca.coordinates_D9) %in% c("QuiescenceType","PC1","PC2")]
+pca_train <- pca.coordinates_D9[1:26,]
+pca_train_category <- pca_train$QuiescenceType
+pca_train$QuiescenceType <- NULL
+dim(pca.coordinates_D9)
+pca_test <- pca.coordinates_D9[27:415,]
+pca.proliferating <- pca_test[!rownames(pca_test) %in% quiescent_cells,]
+pca.proliferating$QuiescenceType <- "Proliferating"
+pca_test <- pca_test[rownames(pca_test) %in% quiescent_cells,]
+pca_test$QuiescenceType <- NULL
+pr <- knn(pca_train,pca_test,cl=pca_train_category,k=3, l = 2)
+results_D9 <- pca_test
+results_D9$QuiescenceType <- pr
+results_D9$QuiescenceType <- as.character(results_D9$QuiescenceType)
+table(results_D9$QuiescenceType)
+results_D9$QuiescenceType <- sapply(results_D9$QuiescenceType, function(x)
+  ifelse(x %in% "spontaneous","spontaneous",
+         ifelse(x %in% "serum","serum",
+                ifelse(x %in% "contact","contact",
+                       ifelse(x %in% "cdk","cdk",
+                              ifelse(x %in% "mek","mek","uncertain"))))))
+pca_train$QuiescenceType <- pca_train_category
+results_D9 <- rbind(pca_train, results_D9, pca.proliferating)
+table(results_D9$QuiescenceType)
+
+
+#D11
+pca.coordinates_D11 <- pca.coordinates_D11[,colnames(pca.coordinates_D11) %in% c("QuiescenceType","PC1","PC2")]
+pca_train <- pca.coordinates_D11[1:26,]
+pca_train_category <- pca_train$QuiescenceType
+pca_train$QuiescenceType <- NULL
+dim(pca.coordinates_D11)
+pca_test <- pca.coordinates_D11[27:279,]
+pca.proliferating <- pca_test[!rownames(pca_test) %in% quiescent_cells,]
+pca.proliferating$QuiescenceType <- "Proliferating"
+pca_test <- pca_test[rownames(pca_test) %in% quiescent_cells,]
+pca_test$QuiescenceType <- NULL
+pr <- knn(pca_train,pca_test,cl=pca_train_category,k=3, l = 2)
+results_D11 <- pca_test
+results_D11$QuiescenceType <- pr
+results_D11$QuiescenceType <- as.character(results_D11$QuiescenceType)
+table(results_D11$QuiescenceType)
+results_D11$QuiescenceType <- sapply(results_D11$QuiescenceType, function(x)
+  ifelse(x %in% "spontaneous","spontaneous",
+         ifelse(x %in% "serum","serum",
+                ifelse(x %in% "contact","contact",
+                       ifelse(x %in% "cdk","cdk",
+                              ifelse(x %in% "mek","mek","uncertain"))))))
+pca_train$QuiescenceType <- pca_train_category
+results_D11 <- rbind(pca_train, results_D11, pca.proliferating)
+table(results_D11$QuiescenceType)
+
+
+
+
+#########################
+#Combine and plot results
+########################
+
+
+#Combine results
+results_D0$Day <- "D0"
+results_D0$Sample <- rownames(results_D0)
+results_D1$Day <- "D1"
+results_D1$Sample <- rownames(results_D1)
+results_D2$Day <- "D2"
+results_D2$Sample <- rownames(results_D2)
+results_D4$Day <- "D4"
+results_D4$Sample <- rownames(results_D4)
+results_D9$Day <- "D9"
+results_D9$Sample <- rownames(results_D9)
+results_D11$Day <- "D11"
+results_D11$Sample <- rownames(results_D11)
+results <- rbind(results_D0, results_D1, results_D11, results_D2, results_D4, results_D9)
+results$Day <- factor(results$Day, levels = c("D0","D1","D2","D4","D9","D11"))
+reference <- results$Sample[1:26]
+results$SampleType <- sapply(results$Sample, function(x)
+  ifelse(x %in% reference, "RNA-seq reference","scRNA-seq"))
+results$SampleType <- factor(results$SampleType, levels = c("scRNA-seq","RNA-seq reference"))
+
+#Plot
+setwd("~/Documents/GitHub/CancerDormancy/QuiescenceTypeClassification/scRNAseq_classification/Figures/")
+plot <- ggplot(results, aes(x= PC1, y=PC2, color = QuiescenceType, shape = SampleType)) + geom_point(aes(shape=SampleType, color=QuiescenceType), alpha = 0.7, size =1)
+pdf("GSE134839_knn_35GeneRefinedPanel.pdf", width = 9, height = 3)
+plot + scale_colour_manual(values = c("cdk" = "firebrick3", "contact" = "royalblue4", "mek" = "lightskyblue", "serum" = "goldenrod1", "spontaneous" = "mediumorchid4","uncertain" = "grey81", "Proliferating" = "mediumseagreen")) + facet_wrap(~Day,nrow = 1) + theme_classic() + scale_size_manual(values=c(1, 1))
+dev.off()
+
+
+
+
+##############################
+##Barplot composition summary:
+#############################
+
+
+QuiescenceType <- c("cdk","contact","mek","serum","spontaneous","uncertain","cdk","contact","mek","serum","spontaneous","uncertain","cdk","contact","mek","serum","spontaneous","uncertain","cdk","contact","mek","serum","spontaneous","uncertain","cdk","contact","mek","serum","spontaneous","uncertain","cdk","contact","mek","serum","spontaneous","uncertain")
+Days <- c(rep(0,6),rep(1,6),rep(2,6),rep(4,6),rep(9,6),rep(11,6))
+N <- c(51,7,230,14,102,106,6,9,72,139,23,38,13,2,50,62,23,20,7,1,74,52,10,14,17,2,71,74,10,44,9,5,49,5,14,18)
+Summary <- data.frame(Days, QuiescenceType, N)
+Summary$Days <- as.factor(Summary$Days)
+pdf("GSE134839_knn_barplot_cell_composition_35GeneRefinedPanel.pdf", height = 5, width = 4)
+p <- ggplot(Summary, aes(fill=QuiescenceType, y=N, x=Days, width = 0.75)) + 
+  geom_bar(stat = "identity", position = "fill") + theme_classic()
+p + rotate_x_text(45) + scale_colour_manual(values = c("cdk" = "firebrick3", "contact" = "royalblue4", "mek" = "lightskyblue", "serum" = "goldenrod1", "spontaneous" = "mediumorchid4","uncertain" = "grey81"))
+
+dev.off()
+
+
+
