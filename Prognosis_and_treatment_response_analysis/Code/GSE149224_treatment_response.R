@@ -281,3 +281,65 @@ p + rotate_x_text(45) + scale_fill_manual(values = c("#666666", "#D95F02"))
 dev.off()
 
 
+
+
+##########################################################
+#Investigation of apoptosis gene expression during treatment
+##########################################################
+
+
+##Load expression data and annotation (can be downloaded from GEO using GSE149224 accession code)
+expr.data <- read.table("GSE149224_RSH.all.txt", header = TRUE,sep = " ")
+#Load apoptosis genes:
+setwd("~/Documents/GitHub/CancerDormancy/Data/OtherGeneLists/")
+apoptosis.genes <- read.table("Apoptosis_hallmarks.txt", header = FALSE,sep = "\t") #downloaded from MSigDb (HALLMARK_APOPTOSIS)
+apoptosis.genes <- as.character(apoptosis.genes$V1)
+expr.apoptosis <- expr.data[rownames(expr.data) %in% apoptosis.genes,]
+#Load annotation:
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Results/")
+load("GSE149224_QuiescenceScores.RData")
+anno$mean_apoptosis_expr <- colMeans(expr.data)
+
+
+#####################
+#PLOT:
+#Mean expression of apoptosis genes at different treatment doses (stratified by cell type)
+setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Figures/")
+anno <- anno[anno$df.gid %in% c("RKO","SW480"),]
+my_comparisons <- list( c("RKO","SW480"))
+p <- ggboxplot(anno, x = "df.gid", y = "mean_apoptosis_expr",
+               color = "df.gid", palette = "jco", short.panel.labs = FALSE)
+# Use only p.format as label. Remove method name.
+pdf("GSE149224_ApoptosisGeneExpr_DoseStratification.pdf",height = 5, width = 10)
+p + stat_compare_means(label = "p.format") + facet_wrap(~dose, nrow = 1)
+dev.off()
+
+
+##Compare expression of apoptosis genes between proliferating and quiescent cells
+anno$quiescence_group <- sapply(anno$QS, function(x)
+  ifelse(x > 0, "Quiescent","Proliferating"))
+#RKO - proliferating vs quiescent cells
+rko.anno <- anno[anno$df.gid %in% "RKO",]
+my_comparisons <- list( c("Quiescent","Proliferating"))
+p <- ggboxplot(rko.anno, x = "quiescence_group", y = "mean_apoptosis_expr",
+               color = "quiescence_group", palette = "jco", short.panel.labs = FALSE)
+# Use only p.format as label. Remove method name.
+pdf("GSE149224_RKO_ApoptosisGeneExpr_prolif_vs_quiescent.pdf",height = 5, width = 5)
+p + stat_compare_means(label = "p.format")
+dev.off()
+#SW480 - proliferating vs quiescent cells
+sw480.anno <- anno[anno$df.gid %in% "SW480",]
+my_comparisons <- list( c("Quiescent","Proliferating"))
+p <- ggboxplot(sw480.anno, x = "quiescence_group", y = "mean_apoptosis_expr",
+               color = "quiescence_group", palette = "jco", short.panel.labs = FALSE)
+# Use only p.format as label. Remove method name.
+pdf("GSE149224_SW480_ApoptosisGeneExpr_prolif_vs_quiescent.pdf",height = 5, width = 5)
+p + stat_compare_means(label = "p.format")
+dev.off()
+
+
+
+
+
+
+
