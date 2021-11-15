@@ -41,6 +41,9 @@ This folder contains the code which explores the impact of cellular dormancy on 
 - **GSE134839_treatment_response.R:** shows changes in quiescence estimates within PC9 NSCLC cells in response to EGFR inhibition.
 - **GSE134499_treatment_response.R:"** shows quiescence dynamics upon various treatment modalities in MCF7 and A549 cell lines.
 - **GSE149224_treatment_response.R:** shows changes in quiescence estimates within TP53 WT and TP53 MT colorectal cancer cells in response to 5-FU treatment.
+- **GSE134838_treatment_response.R:** shows changes in quiescence estimates within melanoma cells in response to BRAF inhibition
+- **GSE134836_treatment_response.R:** shows changes in quiescence estimates within NSCLC cells in response to Tyrosine kinase inhibition.
+- **GSE137912_treatment_response.R:** shows changes in quiescence estimates within lung adenocarcinoma cells in response to KRAS inhibition
 - **TCGA_CoxProportionalHazardsModel_CommonQS.R:** runs a Cox proportional hazards model to determine the effect of quiescence on disease specific survival while accounting for cancer type, tumour stage, mutational rate, as well as patient age and sex.
 - **TCGA_CoxProportionalHazardsModel_IndividualCancerTypes.R:** runs a Cox proportional hazards model to determine the effect of quiescence on disease specific survival within specific cancer types while accounting for tumour stage.
 - **TCGA_CoxProportionalHazardsModel_IndividualQuiescenceTypes.R:** runs a Cox proportional hazards model to determine the effect of different quiescence types on disease specific survival while accounting for cancer type, tumour stage, mutational rate, as well as patient age and sex.
