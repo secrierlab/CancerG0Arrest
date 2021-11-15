@@ -12,6 +12,7 @@ This folder contains the code which explores the association between breast canc
 
 - **BRCA_quiescence_apobec_sbs2_association_heatmap.R:** shows the association between dormancy scores, APOBEC enrichment and breast cancer subtypes in the TCGA cohort 
 - **BRCA_subtype_SBS2_prevelance.R:** compares levels of APOBEC-linked SBS2 mutational burden across breast cancer subtypes within the TCGA cohort.
+- **random_forest-BRCA-code-for-paper.ipynb:** creates the breast cancer specifc random forest model for dormancy prediction
 
 ## CEP89_QuiescenceAssociation
 
