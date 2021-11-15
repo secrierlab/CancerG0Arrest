@@ -44,6 +44,7 @@ This folder contains the code which explores the impact of cellular dormancy on 
 - **TCGA_CoxProportionalHazardsModel_CommonQS.R:** runs a Cox proportional hazards model to determine the effect of quiescence on disease specific survival while accounting for cancer type, tumour stage, mutational rate, as well as patient age and sex.
 - **TCGA_CoxProportionalHazardsModel_IndividualCancerTypes.R:** runs a Cox proportional hazards model to determine the effect of quiescence on disease specific survival within specific cancer types while accounting for tumour stage.
 - **TCGA_CoxProportionalHazardsModel_IndividualQuiescenceTypes.R:** runs a Cox proportional hazards model to determine the effect of different quiescence types on disease specific survival while accounting for cancer type, tumour stage, mutational rate, as well as patient age and sex.
+- **TCGA_QS_vs_TumourStage.R:** shows the relationship between quiescence scores and tumour stage across the TCGA cohort
 
 ## QuiescenceBiomarkerGeneIdentification
 
