@@ -1,0 +1,86 @@
+########################################################################################################
+###Quiescence score comparison between patients with mutations in the DREAM complex and those without:
+#######################################################################################################
+
+###Load necessary packages:
+library(TCGAbiolinks)
+library(stringr)
+library(ggpubr)
+
+########################
+#Load quiescence scores:
+#######################
+setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_QuiescenceScores/")
+load("TCGA_common_QS_purity_scaled.RData")
+#Select CT of interest
+solid_tumours <- unique(as.character(z_score$CancerType))
+
+######################
+####Download maf data:
+#####################
+for (tumour in solid_tumours){
+  print(paste0(tumour, ": This is ", which(tumour == solid_tumours), " out of ", length(solid_tumours)))    #Show progress
+  df.maf <- GDCquery_Maf(tumour, pipelines = "mutect2")
+  df.maf.short <- df.maf[,c("Tumor_Sample_Barcode","Variant_Classification","Hugo_Symbol")]
+  df.maf.short$Cancer <- as.character(tumour)
+  
+  if (tumour == solid_tumours[1]){
+    maf_all <- df.maf.short
+  } else {
+    maf_all <- rbind(maf_all, df.maf.short)
+  }
+}
+
+
+##########################################
+####Annotate patients with DREAM mutations
+##########################################
+#Idenitfy DREAM components:
+DREAM_complex_components  <- c("RBL1", "RBL2", "E2F4", "E2F5", "TFDP1", "TFDP2", "TFPD3", "LIN9", "LIN37", "LIN52", "LIN54", "RBBP4")
+
+#Select mutations which are likely to have a functional impact:
+maf_all.lenient <- maf_all[ which(maf_all$Variant_Classification
+                                  %in% c("Missense_Mutation",
+                                         "Nonsense_Mutation",
+                                         "Nonstop_Mutation",
+                                         "Frameshift_Deletion",
+                                         "Frameshift_Insertion",
+                                         "Inframe_Insertion",
+                                         "Inframe_Deletion")),
+]
+
+##Select patients with mutation annotation
+maf_all.lenient$SampleID <- sapply(maf_all.lenient$Tumor_Sample_Barcode,
+                                   function(x) paste(str_split(x, "-", simplify = T)[1:4], collapse = "-"))
+z_score$SampleID <- sapply(rownames(z_score),
+                           function(x) paste(str_split(x, "-", simplify = T)[1:4], collapse = "-"))
+all_samples <- unique(as.character(maf_all.lenient$SampleID))
+z_score <- z_score[z_score$SampleID %in% all_samples,]
+
+
+##Select patients with DREAM mutation
+maf_all.lenient <- maf_all.lenient[maf_all.lenient$Hugo_Symbol %in% DREAM_complex_components,]
+DREAM_mutations <- unique(as.character(maf_all.lenient$SampleID))
+z_score$DREAM_mutational_status <- sapply(z_score$SampleID, function(x)
+  ifelse(x %in% DREAM_mutations, "MT","WT"))
+table(z_score$DREAM_mutational_status)
+
+
+
+##########################################################################################################
+#Compare scores on a cancer by cancer basis (although compare CT where there are at least 10 MT patients)
+##########################################################################################################
+setwd("~/Documents/GitHub/CancerDormancy/TCGA_DormancyEvaluation/Figures/")
+CT <- c("BLCA","BRCA","CESC","COAD","HNSC","LIHC","LUAD","LUSC","OV","STAD","UCEC")
+z_score <- z_score[z_score$CancerType %in% CT,]
+pdf("TCGA_Cancerwise_QS_comparison_DREAM_MutationalStatus.pdf",height = 5,width = 15)
+my_comparisons <- list( c("MT", "WT"))
+p <- ggplot(z_score, aes(x=CancerType, y=z_score, fill=DREAM_mutational_status)) + 
+  geom_boxplot() +theme_classic() + xlab("Cancer Type") + ylab("Quiescence Score")
+p + stat_compare_means(aes(group = DREAM_mutational_status), label = "p.signif") + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+dev.off()
+
+
+
+
