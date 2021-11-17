@@ -41,7 +41,6 @@ for (i in 1:1000) {
   print(i)
   
   ###Split the data into training and test datasets:
-  #Do not set seed
   # Step 1: Get row numbers for the training data
   trainRowNumbers <- createDataPartition(Merged_data$quiescence_score, p=0.9, list=FALSE)
   # Step 2: Create the training  dataset

@@ -6,21 +6,34 @@
 #Load required packages:
 library(biomaRt)
 library(ggplot2)
+library(TCGAbiolinks)
 
-
-#Load mutational dta:
-setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_MutationalData/")
-load("TCGA_SNV_data.RData") #This is a toy example data with only 100 entires.
 
 
 ##Load quiescence score information along with kmeans clusters (obtained using by clusterin on ComBat treated data)
 setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_QuiescenceScores/")
 load("TCGA_common_QS_and_kmeans_clusters.RData")
 z_score$quiescence_group <- z_score$cluster
+solid_tumours <- unique(as.character(z_score$CancerType))
 
+
+####Download maf data:
+for (tumour in solid_tumours){
+  print(paste0(tumour, ": This is ", which(tumour == solid_tumours), " out of ", length(solid_tumours)))    #Show progress
+  df.maf <- GDCquery_Maf(tumour, pipelines = "mutect2")
+  df.maf.short <- df.maf[,c("Tumor_Sample_Barcode","Variant_Classification","Hugo_Symbol")]
+  df.maf.short$Cancer <- as.character(tumour)
+  
+  if (tumour == solid_tumours[1]){
+    maf_all <- df.maf.short
+  } else {
+    maf_all <- rbind(maf_all, df.maf.short)
+  }
+}
 
 
 #Remove samples which have no mutational data
+pancancer_snv <- maf_all
 pancancer_snv$SampleID <- sapply(pancancer_snv$Tumor_Sample_Barcode, function(x)
   paste(strsplit(x,"-")[[1]][1:4],collapse="-"))
 z_score$SampleID <- sapply(rownames(z_score), function(x)
@@ -28,8 +41,6 @@ z_score$SampleID <- sapply(rownames(z_score), function(x)
 snv.samples <- unique(as.character(pancancer_snv$SampleID))
 z_score <- z_score[z_score$SampleID %in% snv.samples,]
 Pancancer_samples <- z_score
-
-
 
 
 ##Select only mutations of interest which are likely to be deleterious
@@ -430,7 +441,7 @@ Fishers_test_results$yaxis <- 1:12
 
 #Plot the results:
 setwd("~/Documents/GitHub/CancerDormancy/PanCancer_ElasticNetRegression/FeatureExploration/Figures/")
-pdf("FishersExactTest_DDRmutation_vs_quiescence", width = 3, height = 3)
+pdf("FishersExactTest_DDRmutation_vs_quiescence.pdf", width = 3, height = 3)
 p <-ggplot(Fishers_test_results, aes(x = OR, y = yaxis))
 p + geom_vline(aes(xintercept = 1), size = .25, linetype = "dashed") +
   geom_errorbarh(aes(xmax = Upper_confidence_interval, xmin = Lower_confidence_interval), size = .5, height = .2, color = "gray50") +

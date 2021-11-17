@@ -510,7 +510,7 @@ RC <- data.frame(Accuracy)
 RC$Marker <- "Mean RC gene expression"
 
 #Combined Z-score
-Accuracy <- c(0.7656250,0.9652778,0.9861261,1.0000000,0.9275362,0.9222689,0.8148148)
+Accuracy <- c(0.7656250,0.9652778,0.9861261,1.0000000,0.9275362,0.9222689,0.8148148) #These are determined in the "QuiescenceScoreValidation_ROC.R" script
 combined_z_score <- data.frame(Accuracy)
 combined_z_score$Marker <- "Combined Z-Score"
 

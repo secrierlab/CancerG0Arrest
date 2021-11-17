@@ -34,6 +34,7 @@ replication_complex_genes <- c("ENSG00000073111", "ENSG00000112118","ENSG0000010
 #Load TCGA expression data
 setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData")
+#This is a toy example dataset with 100 entries only
 
 ##########################################
 #Load TCGA quiescence scores

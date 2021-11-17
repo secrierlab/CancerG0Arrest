@@ -285,11 +285,14 @@ combined.data <- rbind(combined.data, z_score)
 ###Plot:
 setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analysis/Figures/")
 pdf("BulkRNAseq_TreatmentResponse.pdf",height = 6, width = 7)
-p <- ggboxplot(combined.data, x = "Study", y = "z_score",
-               fill = "Treatment") + theme_classic()
 
 
-p + stat_compare_means(aes(group = Treatment), label = "p.signif") + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+combined.data %>%
+  ggplot( aes(x=Study, y=z_score, fill=Treatment)) +
+  geom_boxplot() +
+  geom_point(position = position_jitterdodge(), size = 0.1) +
+  theme_classic() +
+  xlab("") + stat_compare_means(aes(group = Treatment), label = "p.signif") + theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
 
 dev.off()

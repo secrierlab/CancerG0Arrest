@@ -32,8 +32,6 @@ combined.data <- merge(combined.scaled, z_score,
 combined.data$CDKN1A <- combined.data$ENSG00000124762
 
 
-
-
 #####################################################
 #Split ESCA patients into SC and AC
 #####################################################

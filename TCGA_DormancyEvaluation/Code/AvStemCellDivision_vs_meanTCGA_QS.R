@@ -8,7 +8,7 @@ library(ggpubr)
 
 #Load stem cell division data
 setwd("~/Documents/GitHub/CancerDormancy/Data/StemCellDivisionRates/")
-stem_cell_division_rate <- read.csv("Stem_cell_division_rates.csv", header = TRUE)
+stem_cell_division_rate <- read.csv("Stem_cell_division_rates.csv", header = TRUE) #This data was obtained from data reported by Tomasetti & Vogelstein, Science, 2015 
 stem_cell_division_rate <- stem_cell_division_rate[1:11,]
 
 #Load quiescence scores (general programme):

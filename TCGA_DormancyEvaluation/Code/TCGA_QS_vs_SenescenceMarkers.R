@@ -17,7 +17,6 @@ setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
 load("combined_scaled_expr_data.RData") #This is an example dataset with only 100 entries 
 all(rownames(combined.scaled) == rownames(z_score))
 
-
 #Load SASP genes:
 SASP <- read.csv("journal.pbio.3000599.s009.csv")
 #This data can be downloaded from Basisty et al 2020 (PLOS Biology)

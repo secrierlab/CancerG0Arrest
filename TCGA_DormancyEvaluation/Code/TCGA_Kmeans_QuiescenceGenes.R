@@ -15,7 +15,8 @@ load("downregulated_common.RData")
 
 #Load expression data
 setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_Expr_CNV_Data/")
-combined_data <- fread("TCGA_combat_tumor_type_correction.txt", sep = "\t")
+combined_data <- fread("TCGA_combat_tumor_type_correction.txt", sep = "\t") 
+#This is a toy example data with 100 entries only 
 
 #Load quiescence scores:
 setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_QuiescenceScores/")
