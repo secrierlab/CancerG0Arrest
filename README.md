@@ -44,7 +44,7 @@ This folder cotains code which explores the impact of CEP89 activity on quiescen
 
 - **TCGA_CEP89_status_vs_CA20.R:** shows the association between CEP89 amplification status and CA20 scores (reflective of centromere amplification) using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
 - **TCGA_CoxProportionalHazardsModelCEP89_stratification.R:** calculates Cox proportional hazards analysis estimates for the impact of CEP89 expression on patient prognosis within individual cancer studies.
-- **TCGA_QuiescenceScore_vs_CA20.R:** shows the pan-cancer relationship between CA20 scores (refelctive of centromere amplification) and tumour quiescence across the TCGA cohort, using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
+- **TCGA_QuiescenceScore_vs_CA20.R:** shows the pan-cancer relationship between CA20 scores (reflective of centromere amplification) and tumour quiescence across the TCGA cohort, using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
 
 ## PanCancer_ElasticNetRegression
 
