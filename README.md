@@ -1,8 +1,31 @@
-# CancerDormancy
+# Cancer dormancy
 
 This repository contains code for the evaluation of cellular dormancy/quiescence in cancer.
 
 ![CancerDormancy_picture](https://user-images.githubusercontent.com/51481454/141082122-c3711ca2-1c96-4853-bb46-589356403996.png)
+
+## System Requirements
+Operating system(s): Unix (linux, mac)
+Programming Language: R
+
+## Data
+The majority of the data used in this work can be found in the folder /Data.
+
+## How to run a script (DEMO)
+
+1) Check that all the depencies are installed
+2) Open RStudio or an R-shell
+3) Set the working directory to the path with the script of interest as follows
+
+For example if the user wants to run the pan-cancer elastic net regression model (PanCancer_ElasticNetRegression.R) then these are the steps to follow:
+
+```r
+# Move to the respective directory 
+setwd("CancerDormancy/PanCancer_ElasticNetRegression/ElasticNetRegressionModel/Code/")
+
+# run the script
+source("PanCancer_ElasticNetRegression.R")
+```
 
 # Table of contents
 
@@ -91,3 +114,9 @@ This folder contains code used to profile quiescence levels of solid cancer, pri
 - **TCGA_QS_correlation_with_ProliferationMarkers.R:** shows the association between quiescence scores and the expression of previously reported markers of proliferating cells 
 - **TCGA_PHATE_without_TissueTypeComBatCorrection.R:** performs PHATE dimentionality reduction on TCGA samples based on the expression of quiescence biomarker genes, without the removal of tissue specific expression patterns.
 - **AvStemCellDivision_vs_meanTCGA_QS.R:** shows the correlation between mean quiescence scores across TCGA cancer types and reported stem cell division estimates for the corresponding tissues, using data from Tomasetti and Vogelstein, 2015, Science
+
+# How to cite
+At present, a version of this manuscript is available on bioRxiv: https://www.biorxiv.org/content/10.1101/2021.11.12.468410v1
+
+# Copyright
+This code is free and is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. See the GNU General Public License for more details.
