@@ -59,7 +59,7 @@ This folder contains the code for running the pan-cancer elastic net regression 
 
 ## Prognosis_and_treatment_response_analysis
 
-This folder contains the code which explores the impact of cellular dormancy on patient prognosis as well as treatment response in scRNA-seq datasets.
+This folder contains the code which explores the impact of cellular dormancy on patient prognosis as well as treatment response in bulk RNA and scRNA-seq datasets.
 
 - **BulkRNAseqDatasets_PalbociclibTreatmentResponse.R:** performs the comparison of quiescene programme estimates in cancer cell lines before and after Palbociclib treatment 
 - **BulkRNAseqDatasets_TreatmentResponse.R:** performs the comparison of quiescence levels in bulkRNA-seq cancer cell line datasets in response to Palbociclib, 5-FU and BRAF inhibition.
