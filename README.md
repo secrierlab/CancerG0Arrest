@@ -85,6 +85,7 @@ This folder contains code used to validate the combined z-score quiescence scori
 - **QS_vs_ProliferationMarkers_Performance.R:** Compares the performance of the combined z-score quiescence scoring methodology on separating actvely proliferating and quiescent cells, compared to other markers of proliferating cells.
 - **QuiescenceScore_vs_QuiescenceDepth.R:** Shows quiescence levels estimates of rat embryonic fibroblast cells under serum starvation for various amounts of time, using data from Fujimaki et al 2019, Proc Natl Acad Sci USA
 - **CDK4_6_Inhibition_QS_Validation.R, Contact_Inhibition_QS_Validation.R, MEK_Inhibition_QS_Validation.R, SerumStarvation_QS_Validation.R, Spontaneous_QS_Validation.R"** show the correlation between quiescence score estimates for the specific quiescence programmes and the expression of genes associated with the corresponding form of quiescence in the literature.
+- **NSCLC_CellLine_QS_EuD_pRB_correlation.R:** shows the correlation between quiescence score estimates and Edu + pRB measurements across NSCLC cell lines.
 
 ## QuiescenceTypeClassification
 
