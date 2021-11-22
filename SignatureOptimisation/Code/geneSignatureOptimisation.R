@@ -190,6 +190,6 @@ gini_threshold
 
 setwd("~/Documents/GitHub/CancerDormancy/SignatureOptimisation/Figures")
 pdf("SignatureOptimisationSummary.pdf",height = 8,width = 5)
-ggarrange(corplot, pval_plot, gini_threshold ,
+ggarrange(gini_threshold, corplot, pval_plot ,
           ncol = 1, nrow = 3)
 dev.off()

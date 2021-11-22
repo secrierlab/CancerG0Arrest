@@ -89,9 +89,19 @@ z_score$QuiescenceScore <- z_score$z_score
 z_score$z_score <- NULL
 sample_order <- rownames(z_score)
 rownames(results) <- results$CellLines
-results$CellLines <- NULL
 results <- results[order(match(rownames(results), sample_order)), , drop = FALSE]
+results$DoublingTime <- z_score$DoublingTime
+z_score$DoublingTime <- NULL
+results$CellLines <- NULL
+z_score$DoublingTime <- NULL
+results$`PTEN MUT` <- as.character(results$`PTEN MUT`)
 
+colfunc <- colorRampPalette(c("#00441B","#F7F7F7","#40004B"))
+colfunc(27)
+colours <- colfunc(27)
 #Plot:
-p<-pheatmap(t(results), show_colnames = FALSE, show_rownames = TRUE, cluster_rows = FALSE, cluster_cols = FALSE, annotation = z_score, legend = FALSE, color = c("grey36","gold"))
-p
+p<-pheatmap(t(z_score), show_colnames = FALSE, show_rownames = TRUE, cluster_rows = FALSE, cluster_cols = FALSE, annotation = results, legend = TRUE, color = colours)
+setwd("~/Documents/GitHub/CancerDormancy/PanCancer_ElasticNetRegression/FeatureExploration/Figures/")
+pdf("MCF7_heatmap.pdf",height = 4,width = 8)
+p 
+dev.off()

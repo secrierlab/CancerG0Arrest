@@ -9,6 +9,7 @@ library(ggpubr)
 library(RColorBrewer)
 
 
+
 #Load quiescence scores (common programme)
 setwd("~/Documents/GitHub/CancerDormancy/Data/TCGA_QuiescenceScores/")
 load("TCGA_common_QS_purity_scaled.RData")
@@ -53,6 +54,12 @@ myCols <- myPalette(32)
 z_score$CancerType <- factor(z_score$CancerType,
                              levels = Ordered_cancers)
 setwd("~/Documents/GitHub/CancerDormancy/TCGA_DormancyEvaluation/Figures/")
+
+
+colfunc <- colorRampPalette(c("#1B7837","grey95","#762A83"))
+colfunc(32)
+myCols <- colfunc(32)
+
 pdf("TCGA_QuiescenceScore_TissueVariation.pdf", width = 5, height = 6)
 p <- ggplot(z_score, aes(x=CancerType, y=z_score, fill=CancerType)) +
   geom_boxplot() +
@@ -61,6 +68,3 @@ p <- ggplot(z_score, aes(x=CancerType, y=z_score, fill=CancerType)) +
   xlab("Cancer Type") + ylab("Quiescence Score")
 p + rotate_x_text(45) + labs(y = "Quiescence Score", x = "Cancer Type") + theme(legend.position = "bottom")
 dev.off()
-
-
-

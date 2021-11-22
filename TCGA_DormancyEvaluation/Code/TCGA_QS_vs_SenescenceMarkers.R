@@ -31,7 +31,6 @@ combined.scaled$SASP <- rowMeans(subset(combined.scaled, select = SASP), na.rm =
 ################
 #Plot correlations:
 combined.scaled$QuiescenceScore <- z_score$z_score
-combined.scaled$ENSG00000170266
 setwd("~/Documents/GitHub/CancerDormancy/TCGA_DormancyEvaluation/Figures/")
 pdf("TCGA_QS_vs_SASP.pdf", width = 5, height = 5)
 p <- ggscatter(combined.scaled, x = "SASP", y = "QuiescenceScore",add = "reg.line", add.params = list(color = "blue", fill = "lightgray"), cor.coef = TRUE,

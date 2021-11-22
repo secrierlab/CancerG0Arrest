@@ -1541,17 +1541,17 @@ Difference_matrix$CancerType <- factor(Difference_matrix$CancerType, levels = Le
 
 ###Plot ballonplots:
 setwd("~/Documents/GitHub/CancerDormancy/PanCancer_ElasticNetRegression/ValidationBallonPlot/Figure")
-pdf("TCGA_cBioPortal_Ballonplot.pdf", height = 7,width = 14)
+pdf("TCGA_cBioPortal_Ballonplot_v2.pdf", height = 7,width = 14)
 p <- ggballoonplot(Difference_matrix, x = "Gene", y = "CancerType",
                    size = "minuslog10pval", fill = "QuiescenceScoreChange", size.range = c(3,10)) 
-p +  scale_fill_gradient2(low = "#40004B", high = "#00441B", mid = "#F7F7F7")
+p +  scale_fill_gradient2(low = "#00441B", high = "#40004B", mid = "#F7F7F7")
 
 dev.off()
 
 
 
 
-
+p +  scale_fill_gradient2(low = "#40004B", high = "#00441B", mid = "#F7F7F7")
 
 
 

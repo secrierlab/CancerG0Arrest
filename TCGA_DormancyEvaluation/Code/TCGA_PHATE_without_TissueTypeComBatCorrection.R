@@ -55,17 +55,16 @@ all(rownames(z_score) == phate_coordinates$Barcode)
 phate_coordinates$"Quiescence Score" <- z_score$z_score
 phate_coordinates$CancerType <- z_score$CancerType
 
-#Plot the coordiantes
-mypalette  = colorRampPalette(
-  c("darkorange3", "lightgoldenrodyellow","darkblue")
-)(100)
-
+#colour by QS
+colfunc <- colorRampPalette(c("#1B7837","grey95","#762A83"))
+colfunc(100)
+myCols <- colfunc(100)
 
 #Colour by quiescence scores:
 setwd("~/Documents/GitHub/CancerDormancy/TCGA_DormancyEvaluation/Figures/")
 plot <- ggplot(phate_coordinates, aes(x= PHATE2, y=PHATE1, color = `Quiescence Score`)) + geom_point(size = 2, alpha = 0.3) + theme_classic()
-pdf("PHATE_NoComBat_coloured_by_QS.pdf", width = 6, height = 6)
-plot + scale_colour_gradientn(colours = mypalette, limits=c(-20, 20))
+pdf("PHATE_NoComBat_coloured_by_QS_v2.pdf", width = 6, height = 6)
+plot + scale_colour_gradientn(colours = myCols, limits=c(-20, 20))
 dev.off()
 
 

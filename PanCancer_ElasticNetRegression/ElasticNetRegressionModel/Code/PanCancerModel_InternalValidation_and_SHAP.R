@@ -108,14 +108,17 @@ results$variable <- as.factor(results$variable)
 results$variable <- factor(results$variable, levels = rev(ordered_features))
 
 ## Plot shap overall metrics
+colfunc <- colorRampPalette(c("#1B7837","grey95","#762A83"))
+colfunc(100)
+myCols <- colfunc(100)
+
 plot1 <- ggplot(data = results)+
   coord_flip() + 
   # sina plot: 
-  geom_sina(aes(x = variable, y = value, color = feature_value)) + scale_color_gradient(low="#FFCC33", high="#6600CC", 
-                                                                                        breaks=c(0,1), labels=c("Low","High")) + labs(y = "SHAP value (impact on model output)", x = "", color = "Feature value") + theme_classic()
+  geom_sina(aes(x = variable, y = value, color = feature_value)) + labs(y = "SHAP value (impact on model output)", x = "", color = "Feature value") + theme_classic()
 setwd("~/Documents/GitHub/CancerDormancy/PanCancer_ElasticNetRegression/ElasticNetRegressionModel/Figures/")
 pdf("SHAP_plot_all_features.pdf",height = 10,width = 10)
-plot1
+plot1 + scale_colour_gradientn(colours = myCols)
 dev.off()
 
 
@@ -133,11 +136,11 @@ filtered.results$variable <- factor(filtered.results$variable, levels = rev(orde
 plot1 <- ggplot(data = filtered.results)+
   coord_flip() + 
   # sina plot: 
-  geom_sina(aes(x = variable, y = value, color = feature_value)) + scale_color_gradient(low="#FFCC33", high="#6600CC", 
-                                                                                        breaks=c(0,1), labels=c("Low","High")) + labs(y = "SHAP value (impact on model output)", x = "", color = "Feature value") + theme_classic()
+  geom_sina(aes(x = variable, y = value, color = feature_value)) + labs(y = "SHAP value (impact on model output)", x = "", color = "Feature value") + theme_classic()
 setwd("~/Documents/GitHub/CancerDormancy/PanCancer_ElasticNetRegression/ElasticNetRegressionModel/Figures/")
 pdf("SHAP_plot_non_cancer_type_features.pdf",height = 10,width = 10)
-plot1
+plot1 + scale_colour_gradientn(colours = myCols)
+
 dev.off()
 
 

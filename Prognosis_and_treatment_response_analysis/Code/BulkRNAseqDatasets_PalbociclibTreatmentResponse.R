@@ -425,12 +425,10 @@ setwd("~/Documents/GitHub/CancerDormancy/Prognosis_and_treatment_response_analys
 pdf("BulkRNAseq_PalbociclibTreatmentResponse.pdf",height = 6, width = 7)
 
 
-combined.data %>%
-  ggplot( aes(x=Study, y=QuiescenceScore, fill=Treatment)) +
-  geom_boxplot() +
-  geom_point(position = position_jitterdodge(), size = 0.1) +
-  theme_classic() +
-  xlab("") + stat_compare_means(aes(group = Treatment), label = "p.signif") + theme(axis.text.x = element_text(angle = 45, hjust = 1)) + facet_wrap(~QuiescenceScoreType)
+p<-ggplot(combined.data, aes(x=Study, y=QuiescenceScore, fill=Treatment)) +
+  geom_dotplot(binaxis='y', stackdir='center', 
+               position=position_dodge(0.8),binwidth = 0.6) + facet_wrap(~QuiescenceScoreType)
+p +  theme_classic() + stat_compare_means(aes(group = Treatment), label = "p.signif")
 
 
 dev.off()
