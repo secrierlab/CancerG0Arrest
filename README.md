@@ -42,9 +42,9 @@ This folder contains the code which explores the association between breast canc
 
 This folder cotains code which explores the impact of CEP89 activity on quiescence-proliferation decisions.
 
-- **TCGA_CEP89_status_vs_CA20.R:** shows the association between CEP89 amplification status and CA20 scores (refelctive of centromere amplification) using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
+- **TCGA_CEP89_status_vs_CA20.R:** shows the association between CEP89 amplification status and CA20 scores (reflective of centromere amplification) using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
 - **TCGA_CoxProportionalHazardsModelCEP89_stratification.R:** calculates Cox proportional hazards analysis estimates for the impact of CEP89 expression on patient prognosis within individual cancer studies.
-- **TCGA_QuiescenceScore_vs_CA20.R:** shows the pan-cancer relationship between CA20 scores (refelctive of centromere amplification) and tumour quiescence across the TCGA cohort, using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
+- **TCGA_QuiescenceScore_vs_CA20.R:** shows the pan-cancer relationship between CA20 scores (reflective of centromere amplification) and tumour quiescence across the TCGA cohort, using data obtained from de Almeida et al 2019 (PLOS Computational Biology)
 
 ## PanCancer_ElasticNetRegression
 
@@ -55,10 +55,11 @@ This folder contains the code for running the pan-cancer elastic net regression 
 - **Quiescence_MSI_association.R:** shows the association between quiescence and microsatelite instability using data from Cortes-Ciriano et al 2017, Nature Communications
 - **PanCancer_ElasticNetRegression.R:** runs 1000 iterations of the pan-cancer elastic net regression model to identuft genomic events significantly associated with dormancy.
 - **PanCancerModel_InternalValidation_and_SHAP.R:** shows the correlation between predicted and observed quiescence scores in the interal TCGA validation cohort. It also illustrates the importance of individual features using a SHAP plots.
+- **ValidationBallonPlot.R:** shows the association between genomic features identifed by the elastic net model and quiescence across the TCGA cohort and cBioPortal studies
 
 ## Prognosis_and_treatment_response_analysis
 
-This folder contains the code which explores the impact of cellular dormancy on patient prognosis as well as treatment response in scRNA-seq datasets.
+This folder contains the code which explores the impact of cellular dormancy on patient prognosis as well as treatment response in bulk RNA and scRNA-seq datasets.
 
 - **BulkRNAseqDatasets_PalbociclibTreatmentResponse.R:** performs the comparison of quiescene programme estimates in cancer cell lines before and after Palbociclib treatment 
 - **BulkRNAseqDatasets_TreatmentResponse.R:** performs the comparison of quiescence levels in bulkRNA-seq cancer cell line datasets in response to Palbociclib, 5-FU and BRAF inhibition.
@@ -84,6 +85,7 @@ This folder contains code used to validate the combined z-score quiescence scori
 - **QS_vs_ProliferationMarkers_Performance.R:** Compares the performance of the combined z-score quiescence scoring methodology on separating actvely proliferating and quiescent cells, compared to other markers of proliferating cells.
 - **QuiescenceScore_vs_QuiescenceDepth.R:** Shows quiescence levels estimates of rat embryonic fibroblast cells under serum starvation for various amounts of time, using data from Fujimaki et al 2019, Proc Natl Acad Sci USA
 - **CDK4_6_Inhibition_QS_Validation.R, Contact_Inhibition_QS_Validation.R, MEK_Inhibition_QS_Validation.R, SerumStarvation_QS_Validation.R, Spontaneous_QS_Validation.R"** show the correlation between quiescence score estimates for the specific quiescence programmes and the expression of genes associated with the corresponding form of quiescence in the literature.
+- **NSCLC_CellLine_QS_EuD_pRB_correlation.R:** shows the correlation between quiescence score estimates and Edu + pRB measurements across NSCLC cell lines.
 
 ## QuiescenceTypeClassification
 
@@ -104,6 +106,8 @@ This folder contains code used to download and process TCGA expression, copy-num
 ## TCGA_DormancyEvaluation
 
 This folder contains code used to profile quiescence levels of solid cancer, primary tumour samples, across the TCGA cohort. 
+- **TCGA_QuiescenceScore_Calculation.R:** calculates quiescence scores across the TCGA cohort
+- **TCGA_QS_TissueVariation.R:** shows variation in quiescence score estimates across different cancer type studies within the TCGA cohort
 - **TCGA_QS_vs_DREAM_MutationalStatus.R:** shows the association between quiescence levels and DREAM complex mutational status in cancer
 - **TCGA_QS_vs_SenescenceMarkers.R:** investigates the relationship between quiescence and senescnece in cancer
 - **TCGA_QS_vs_StemnessExpressionIndicies.R:** investigates the relationship between quiescence and stem cell marker expression in cancer using data Malta et al 2018, Cell
