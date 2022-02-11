@@ -1,6 +1,6 @@
-# Cancer dormancy
+# Cancer cell quiescence
 
-This repository contains code for the evaluation of cellular dormancy/quiescence in cancer based on transcriptomics data.
+This repository contains code for the evaluation of cellular quiescence in cancer based on transcriptomics data.
 
 ![CancerDormancy_picture](https://user-images.githubusercontent.com/51481454/141082122-c3711ca2-1c96-4853-bb46-589356403996.png)
 
@@ -22,7 +22,7 @@ For example if the user wants to run the pan-cancer elastic net regression model
 
 ```r
 # Move to the respective directory 
-setwd("CancerDormancy/PanCancer_ElasticNetRegression/ElasticNetRegressionModel/Code/")
+setwd("CancerCellQuiescence/PanCancer_ElasticNetRegression/ElasticNetRegressionModel/Code/")
 
 # run the script
 source("PanCancer_ElasticNetRegression.R")
@@ -32,11 +32,11 @@ source("PanCancer_ElasticNetRegression.R")
 
 ## BRCA_Quiescence
 
-This folder contains the code which explores the association between breast cancer dormancy and genomic features shown to be linked with this state by a breast cancer specific random forest model.
+This folder contains the code which explores the association between breast cancer cell quiescence and genomic features shown to be linked with this state by a breast cancer specific random forest model.
 
-- **BRCA_quiescence_apobec_sbs2_association_heatmap.R:** shows the association between dormancy scores, APOBEC enrichment and breast cancer subtypes in the TCGA cohort 
+- **BRCA_quiescence_apobec_sbs2_association_heatmap.R:** shows the association between quiescence scores, APOBEC enrichment and breast cancer subtypes in the TCGA cohort 
 - **BRCA_subtype_SBS2_prevelance.R:** compares levels of APOBEC-linked SBS2 mutational burden across breast cancer subtypes within the TCGA cohort.
-- **random_forest-BRCA-code-for-paper.ipynb:** creates the breast cancer specifc random forest model for dormancy prediction
+- **random_forest-BRCA-code-for-paper.ipynb:** creates the breast cancer specifc random forest model for quiescence prediction
 
 ## CEP89_QuiescenceAssociation
 
@@ -48,18 +48,18 @@ This folder cotains code which explores the impact of CEP89 activity on quiescen
 
 ## PanCancer_ElasticNetRegression
 
-This folder contains the code for running the pan-cancer elastic net regression model designed to identify genomic features associated with cellular dormancy in cancer.
+This folder contains the code for running the pan-cancer elastic net regression model designed to identify genomic features associated with cellular quiescence in cancer.
 
 - **FishersExactTest_DDRmutation_vs_quiescence.R:** shows the depletion of mutations across the DNA damage repair pathways in TCGA samples with high levels of quiescence
 - **MCF7_PTEN_mutation_vs_DoublingTime.R:** shows the association between quiescence scores, doubling time and PTEN mutational status in MCF7 cell line stains using data from Ben-David et al 2018, Nature
 - **Quiescence_MSI_association.R:** shows the association between quiescence and microsatelite instability using data from Cortes-Ciriano et al 2017, Nature Communications
-- **PanCancer_ElasticNetRegression.R:** runs 1000 iterations of the pan-cancer elastic net regression model to identuft genomic events significantly associated with dormancy.
+- **PanCancer_ElasticNetRegression.R:** runs 1000 iterations of the pan-cancer elastic net regression model to identuft genomic events significantly associated with quiescence.
 - **PanCancerModel_InternalValidation_and_SHAP.R:** shows the correlation between predicted and observed quiescence scores in the interal TCGA validation cohort. It also illustrates the importance of individual features using a SHAP plots.
 - **ValidationBallonPlot.R:** shows the association between genomic features identifed by the elastic net model and quiescence across the TCGA cohort and cBioPortal studies
 
 ## Prognosis_and_treatment_response_analysis
 
-This folder contains the code which explores the impact of cellular dormancy on patient prognosis as well as treatment response in bulk RNA and scRNA-seq datasets.
+This folder contains the code which explores the impact of cellular quiescence on patient prognosis as well as treatment response in bulk RNA and scRNA-seq datasets.
 
 - **BulkRNAseqDatasets_PalbociclibTreatmentResponse.R:** performs the comparison of quiescene programme estimates in cancer cell lines before and after Palbociclib treatment 
 - **BulkRNAseqDatasets_TreatmentResponse.R:** performs the comparison of quiescence levels in bulkRNA-seq cancer cell line datasets in response to Palbociclib, 5-FU and BRAF inhibition.
@@ -103,7 +103,7 @@ This folder contains code used to download and process TCGA expression, copy-num
 - **TCGA_Expression_CNV_DataDownload.R:** downloads expression and CNV TCGA data for all solid tissue cancer samples from TCGABiolinks.
 - **TCGA_ExpressionData_PurityScaling.R:** scales TCGA FPKM normalised expression data accoridng to tumour sample purity.
 
-## TCGA_DormancyEvaluation
+## TCGA_QuiescenceEvaluation
 
 This folder contains code used to profile quiescence levels of solid cancer, primary tumour samples, across the TCGA cohort. 
 - **TCGA_QuiescenceScore_Calculation.R:** calculates quiescence scores across the TCGA cohort
