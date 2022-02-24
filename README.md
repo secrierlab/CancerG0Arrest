@@ -2,6 +2,8 @@
 
 This repository contains code for the evaluation of cellular quiescence in cancer based on transcriptomics data.
 
+![CancerQuiescence-workflow](https://user-images.githubusercontent.com/1819561/155572705-cd6097d9-eb47-404e-9bc6-c927cfec6090.png)
+
 ![CancerDormancy_picture](https://user-images.githubusercontent.com/51481454/141082122-c3711ca2-1c96-4853-bb46-589356403996.png)
 
 ## System Requirements
