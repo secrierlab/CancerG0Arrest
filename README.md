@@ -121,7 +121,7 @@ This folder contains code used to profile quiescence levels of solid cancer, pri
 - **AvStemCellDivision_vs_meanTCGA_QS.R:** shows the correlation between mean quiescence scores across TCGA cancer types and reported stem cell division estimates for the corresponding tissues, using data from Tomasetti and Vogelstein, 2015, Science
 
 # How to cite
-At present, a version of this manuscript is available on bioRxiv: https://www.biorxiv.org/content/10.1101/2021.11.12.468410v1
+At present, a version of this manuscript is available on bioRxiv: https://www.biorxiv.org/content/10.1101/2021.11.12.468410v3
 
 # Copyright
 This code is free and is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. See the GNU General Public License for more details.
