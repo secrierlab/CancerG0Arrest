@@ -1,6 +1,8 @@
-# Cancer cell quiescence
+# Genomic hallmarks and therapeutic implications of cell cycle arrest in cancer
 
-This repository contains code for the evaluation of cellular quiescence in cancer based on transcriptomics data.
+## Authors: Anna Wiecek, Maria Secrier
+
+This repository contains code for the evaluation of cell cycle arrest (G0) in cancer based on transcriptomics data.
 
 ![CancerQuiescence-workflow](https://user-images.githubusercontent.com/1819561/155572705-cd6097d9-eb47-404e-9bc6-c927cfec6090.png)
 
