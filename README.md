@@ -1,4 +1,4 @@
-# Genomic hallmarks and therapeutic implications of cell cycle arrest in cancer
+# Genomic hallmarks and therapeutic implications of G0 cell cycle arrest in cancer
 
 ## Authors: Anna Wiecek, Maria Secrier
 
