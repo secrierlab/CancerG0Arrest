@@ -1,0 +1,11 @@
+cff-version: 1.6.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Wiecek"
+  given-names: "Anna"
+- family-names: "Secrier"
+  given-names: "Maria"
+title: "Genomic hallmarks and therapeutic implications of G0 cell cycle arrest in cancer "
+version: 1.0
+date-released: 2023-04-18
+url: "https://github.com/secrierlab/CancerG0Arrest"
