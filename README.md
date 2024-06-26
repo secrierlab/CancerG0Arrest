@@ -6,6 +6,9 @@ This repository contains code for the evaluation of G0 cell cycle arrest in canc
 
 ![CancerQuiescence-workflow](https://user-images.githubusercontent.com/1819561/155572705-cd6097d9-eb47-404e-9bc6-c927cfec6090.png)
 
+## Quiescence score package
+
+We provide a package to calculate the quiescence score as described in the publication here: ![QuieScore package](https://github.com/dkornai/QuieScore/tree/master)
 
 ## System Requirements
 Operating system(s): Unix (linux, mac)
